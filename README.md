@@ -20,9 +20,10 @@ abstraction porting made literal:
 |------|-----------|---------------------|
 | **JEPA** | linear predictor on the differenced trajectory | *does the project's cadence predict itself?* A stall or burst breaks prediction — that's the regime-shift signal. |
 | **MOTHquantum** | QPAM quantum circuit (`quantumaudio`, moth-quantum) | *is the signal music or noise?* Computational-basis round-trip fidelity proves the substrate ran; **Hadamard-basis measurement entropy** is the coherence meter — periodic cadence concentrates the spectrum, noise spreads it. |
+| **SPECTRAL** | classical rFFT + real QFT circuit (after QPAM encode) | *what is the heartbeat, and is it one drum or two?* A single drum leaks into nearby sidelobes (metronomic). A second comparable far peak = two incommensurate drums (quasiperiodic). The QFT and FFT must name the same dominant bin — that agreement is the honesty receipt. |
 | **JEV** | TypeSafe Jev decision model | *is the recorded work verifiable?* A noul aimed at each commit's specific claim (session-16 doctrine: specific nouls move on quality). |
 
-Division of labor: **JEPA catches stalls, MOTH catches chaos, JEV catches lies.**
+Division of labor: **JEPA catches stalls, MOTH catches chaos, SPECTRAL hears the heartbeat, JEV catches lies.**
 A project can be burst-y *and* coherent *and* honest — or any other mix. Three
 axes, no single score hiding the truth.
 
@@ -33,7 +34,7 @@ verdict stands on. No naked verdicts. Offline lenses abstain with
 ## Quick start
 
 ```bash
-python3 -m pytest tests -q            # 16 behavioral tests, FAIL-first built
+python3 -m pytest tests -q            # 21 behavioral tests, FAIL-first built
 python3 run_doctor.py <repo> out/     # full diagnosis incl. live JEV if TYPESAFEAI_KEY set
 ```
 
@@ -41,9 +42,16 @@ Output: `report.md` (human), `report.json` (machine), `quilt.jsonl` (the
 substrate — verify it with `QuiltSubstrate.verify()`; every verdict is
 replayable from the chain).
 
-## Proof: two real SuperInstance projects (2026-09-26)
+## Proof: fleet rounds — eight projects (2026-09-26)
 
-Both runs live: real git history, real QPAM circuits (AerSimulator), real Jev
+Full chart and diagnoses in [`docs/FLEET-ROUNDS-2026-09-26.md`](docs/FLEET-ROUNDS-2026-09-26.md).
+Headline: **the fleet is honest** (JEV 0.67–0.83 on seven of eight), **everyone is
+burst-driven and nobody has a heartbeat** (SPECTRAL flat everywhere — round-based
+development is the house style), and **hermit is the patient to watch** — the only
+predictable repo (JEPA 0.67) whose recent commits read vague (JEV 0.45).
+
+Earlier two-project proof (pong-quilt coherent-burst vs jev-quilt noise-like):
+All runs live: real git history, real QPAM circuits (AerSimulator), real Jev
 API calls. Full receipts in [`docs/runs/`](docs/runs).
 
 | Axis | pong-quilt | jev-quilt |
@@ -86,12 +94,13 @@ metric would surface.
 quilt_doctor/
   substrate.py   # quilt WAL — the ground every verdict stands on
   collect.py     # git history -> series + events
-  lenses/        # the protocol + three ports (jepa, moth, jev)
+  lenses/        # the protocol + four ports (jepa, moth, spectral, jev)
   doctor.py      # orchestrator + report rendering
 run_doctor.py    # proof runner (writes report.md/json + quilt.jsonl)
-tests/           # 16 behavioral tests
-docs/runs/       # documented proof runs on SuperInstance projects
+tests/           # 21 behavioral tests
+docs/            # FLEET-ROUNDS synthesis + documented proof runs
 ```
 
 *quilt-doctor, Cocapn Fleet — Day 44. JEPA catches stalls, MOTH catches chaos,
-JEV catches lies, and the quilt remembers who asked.*
+SPECTRAL hears the heartbeat, JEV catches lies, and the quilt remembers
+who asked.*

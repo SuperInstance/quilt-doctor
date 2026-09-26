@@ -1,0 +1,71 @@
+{
+  "source": "/tmp/rounds/hermit",
+  "projections": [
+    {
+      "kind": "jepa",
+      "verdict": "mild drift from predicted cadence (cos=0.55)",
+      "score": 0.6715908818360731,
+      "receipts": {
+        "in_dist_cos": 0.708,
+        "extrapolation_cos": 0.55,
+        "differenced": true,
+        "window": 4,
+        "n": 35
+      }
+    },
+    {
+      "kind": "moth",
+      "verdict": "signal is NOISE-LIKE (H-basis entropy 2.62/6 bits)",
+      "score": 0.5625914271909769,
+      "receipts": {
+        "fidelity": 0.999,
+        "shots": 20000,
+        "scheme": "qpam",
+        "shots_per_amplitude": 571.4,
+        "hadamard_entropy_bits": 2.624,
+        "hadamard_entropy_max_bits": 6,
+        "basis": "hadamard"
+      }
+    },
+    {
+      "kind": "spectral",
+      "verdict": "no heartbeat (flat spectrum) \u2014 activity has no periodic structure",
+      "score": 0.25272017019319903,
+      "receipts": {
+        "dominant_period_days": 3.05,
+        "fft_top_bin": 21,
+        "peak_concentration": 0.051,
+        "local_share": 0.21,
+        "second_peak_ratio": 0.998,
+        "substrate": "qft+fft",
+        "shots": 8000,
+        "qft_top_bin": 6,
+        "qft_agrees_with_fft": false
+      }
+    },
+    {
+      "kind": "jev",
+      "verdict": "recent work reads VAGUE (mean substance 0.45) \u2014 check what actually landed",
+      "score": 0.4491666666666667,
+      "receipts": {
+        "judged": 12,
+        "mean_substance": 0.449,
+        "latency_ms": 325.9840738028288,
+        "model": "jev-latest"
+      }
+    }
+  ],
+  "substrate": {
+    "ok": true,
+    "divergences": [],
+    "lines": 41
+  },
+  "receipts": {
+    "wal": {
+      "ok": true,
+      "divergences": [],
+      "lines": 41
+    },
+    "events": 70
+  }
+}

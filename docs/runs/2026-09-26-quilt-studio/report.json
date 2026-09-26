@@ -1,0 +1,71 @@
+{
+  "source": "/tmp/rounds/quilt-studio",
+  "projections": [
+    {
+      "kind": "jepa",
+      "verdict": "REGIME SHIFT: recent cadence breaks prediction (cos=0.00)",
+      "score": 0.2,
+      "receipts": {
+        "in_dist_cos": 0.0,
+        "extrapolation_cos": 0.0,
+        "differenced": true,
+        "window": 4,
+        "n": 35
+      }
+    },
+    {
+      "kind": "moth",
+      "verdict": "signal is NOISE-LIKE (H-basis entropy 2.42/6 bits)",
+      "score": 0.5961722344493068,
+      "receipts": {
+        "fidelity": 1.0,
+        "shots": 20000,
+        "scheme": "qpam",
+        "shots_per_amplitude": 571.4,
+        "hadamard_entropy_bits": 2.423,
+        "hadamard_entropy_max_bits": 6,
+        "basis": "hadamard"
+      }
+    },
+    {
+      "kind": "spectral",
+      "verdict": "no heartbeat (flat spectrum) \u2014 activity has no periodic structure",
+      "score": 0.2672519823302472,
+      "receipts": {
+        "dominant_period_days": 32.0,
+        "fft_top_bin": 2,
+        "peak_concentration": 0.053,
+        "local_share": 0.222,
+        "second_peak_ratio": 0.879,
+        "substrate": "qft+fft",
+        "shots": 8000,
+        "qft_top_bin": 62,
+        "qft_agrees_with_fft": false
+      }
+    },
+    {
+      "kind": "jev",
+      "verdict": "recent work reads VERIFIABLE (mean substance 0.73 over 12 commits)",
+      "score": 0.7258333333333332,
+      "receipts": {
+        "judged": 12,
+        "mean_substance": 0.726,
+        "latency_ms": 353.82020100951195,
+        "model": "jev-latest"
+      }
+    }
+  ],
+  "substrate": {
+    "ok": true,
+    "divergences": [],
+    "lines": 41
+  },
+  "receipts": {
+    "wal": {
+      "ok": true,
+      "divergences": [],
+      "lines": 41
+    },
+    "events": 52
+  }
+}
