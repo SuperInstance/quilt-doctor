@@ -16,13 +16,13 @@
     {
       "kind": "moth",
       "verdict": "signal is NOISE-LIKE (H-basis entropy 2.62/6 bits)",
-      "score": 0.5625914271909769,
+      "score": 0.5640817919696701,
       "receipts": {
-        "fidelity": 0.999,
+        "fidelity": 1.0,
         "shots": 20000,
         "scheme": "qpam",
         "shots_per_amplitude": 571.4,
-        "hadamard_entropy_bits": 2.624,
+        "hadamard_entropy_bits": 2.616,
         "hadamard_entropy_max_bits": 6,
         "basis": "hadamard"
       }
@@ -39,18 +39,20 @@
         "second_peak_ratio": 0.998,
         "substrate": "qft+fft",
         "shots": 8000,
-        "qft_top_bin": 6,
-        "qft_agrees_with_fft": false
+        "seed": 49354,
+        "qft_top_bin": 21,
+        "qft_agrees_with_fft": true,
+        "real_signal_fold": true
       }
     },
     {
       "kind": "jev",
-      "verdict": "recent work reads VAGUE (mean substance 0.45) \u2014 check what actually landed",
-      "score": 0.4491666666666667,
+      "verdict": "recent work reads VAGUE (mean substance 0.46) \u2014 check what actually landed",
+      "score": 0.46249999999999997,
       "receipts": {
         "judged": 12,
-        "mean_substance": 0.449,
-        "latency_ms": 325.9840738028288,
+        "mean_substance": 0.462,
+        "latency_ms": 289.2157919704914,
         "model": "jev-latest"
       }
     }
@@ -58,13 +60,13 @@
   "substrate": {
     "ok": true,
     "divergences": [],
-    "lines": 41
+    "lines": 82
   },
   "receipts": {
     "wal": {
       "ok": true,
       "divergences": [],
-      "lines": 41
+      "lines": 82
     },
     "events": 70
   }

@@ -19,11 +19,11 @@ n: 35
 signal is NOISE-LIKE (H-basis entropy 2.62/6 bits)
 
 ```
-fidelity: 0.999
+fidelity: 1.0
 shots: 20000
 scheme: qpam
 shots_per_amplitude: 571.4
-hadamard_entropy_bits: 2.624
+hadamard_entropy_bits: 2.616
 hadamard_entropy_max_bits: 6
 basis: hadamard
 ```
@@ -39,20 +39,22 @@ local_share: 0.21
 second_peak_ratio: 0.998
 substrate: qft+fft
 shots: 8000
-qft_top_bin: 6
-qft_agrees_with_fft: False
+seed: 49354
+qft_top_bin: 21
+qft_agrees_with_fft: True
+real_signal_fold: True
 ```
 
-### JEV — score 0.45
-recent work reads VAGUE (mean substance 0.45) — check what actually landed
+### JEV — score 0.46
+recent work reads VAGUE (mean substance 0.46) — check what actually landed
 
 ```
 judged: 12
-mean_substance: 0.449
-latency_ms: 325.9840738028288
+mean_substance: 0.462
+latency_ms: 289.2157919704914
 model: jev-latest
 ```
 
 ## Substrate
-- quilt WAL: 41 lines, verify: OK
+- quilt WAL: 82 lines, verify: OK
 - every verdict above is replayable from the chain

@@ -15,15 +15,15 @@ window: 4
 n: 35
 ```
 
-### MOTH — score 0.60
-signal is NOISE-LIKE (H-basis entropy 2.42/6 bits)
+### MOTH — score 0.59
+signal is NOISE-LIKE (H-basis entropy 2.43/6 bits)
 
 ```
 fidelity: 1.0
 shots: 20000
 scheme: qpam
 shots_per_amplitude: 571.4
-hadamard_entropy_bits: 2.423
+hadamard_entropy_bits: 2.434
 hadamard_entropy_max_bits: 6
 basis: hadamard
 ```
@@ -39,8 +39,10 @@ local_share: 0.222
 second_peak_ratio: 0.879
 substrate: qft+fft
 shots: 8000
-qft_top_bin: 62
-qft_agrees_with_fft: False
+seed: 49354
+qft_top_bin: 2
+qft_agrees_with_fft: True
+real_signal_fold: True
 ```
 
 ### JEV — score 0.73
@@ -48,11 +50,11 @@ recent work reads VERIFIABLE (mean substance 0.73 over 12 commits)
 
 ```
 judged: 12
-mean_substance: 0.726
-latency_ms: 353.82020100951195
+mean_substance: 0.728
+latency_ms: 308.99151787161827
 model: jev-latest
 ```
 
 ## Substrate
-- quilt WAL: 41 lines, verify: OK
+- quilt WAL: 82 lines, verify: OK
 - every verdict above is replayable from the chain

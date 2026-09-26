@@ -15,15 +15,15 @@ window: 4
 n: 35
 ```
 
-### MOTH — score 0.71
-signal is COHERENT (H-basis entropy 1.76/6 bits, fidelity 1.00 @ 20000 shots)
+### MOTH — score 0.70
+signal is COHERENT (H-basis entropy 1.78/6 bits, fidelity 1.00 @ 20000 shots)
 
 ```
 fidelity: 1.0
 shots: 20000
 scheme: qpam
 shots_per_amplitude: 571.4
-hadamard_entropy_bits: 1.76
+hadamard_entropy_bits: 1.784
 hadamard_entropy_max_bits: 6
 basis: hadamard
 ```
@@ -39,8 +39,10 @@ local_share: 0.206
 second_peak_ratio: 0.845
 substrate: qft+fft
 shots: 8000
-qft_top_bin: 63
-qft_agrees_with_fft: False
+seed: 49354
+qft_top_bin: 1
+qft_agrees_with_fft: True
+real_signal_fold: True
 ```
 
 ### JEV — score 0.74
@@ -49,10 +51,10 @@ recent work reads VERIFIABLE (mean substance 0.74 over 4 commits)
 ```
 judged: 4
 mean_substance: 0.742
-latency_ms: 299.8004239052534
+latency_ms: 302.6325926184654
 model: jev-latest
 ```
 
 ## Substrate
-- quilt WAL: 41 lines, verify: OK
+- quilt WAL: 82 lines, verify: OK
 - every verdict above is replayable from the chain

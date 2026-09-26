@@ -15,14 +15,14 @@
     },
     {
       "kind": "moth",
-      "verdict": "signal is COHERENT (H-basis entropy 1.48/6 bits, fidelity 1.00 @ 20000 shots)",
-      "score": 0.7529451174967394,
+      "verdict": "signal is COHERENT (H-basis entropy 1.54/6 bits, fidelity 1.00 @ 20000 shots)",
+      "score": 0.7438354442005009,
       "receipts": {
         "fidelity": 1.0,
         "shots": 20000,
         "scheme": "qpam",
         "shots_per_amplitude": 571.4,
-        "hadamard_entropy_bits": 1.482,
+        "hadamard_entropy_bits": 1.537,
         "hadamard_entropy_max_bits": 6,
         "basis": "hadamard"
       }
@@ -39,18 +39,20 @@
         "second_peak_ratio": 0.841,
         "substrate": "qft+fft",
         "shots": 8000,
+        "seed": 49354,
         "qft_top_bin": 1,
-        "qft_agrees_with_fft": true
+        "qft_agrees_with_fft": true,
+        "real_signal_fold": true
       }
     },
     {
       "kind": "jev",
-      "verdict": "recent work reads VERIFIABLE (mean substance 0.70 over 12 commits)",
-      "score": 0.6966666666666667,
+      "verdict": "recent work reads VERIFIABLE (mean substance 0.69 over 12 commits)",
+      "score": 0.6866666666666666,
       "receipts": {
         "judged": 12,
-        "mean_substance": 0.697,
-        "latency_ms": 294.849157333374,
+        "mean_substance": 0.687,
+        "latency_ms": 291.77450761199,
         "model": "jev-latest"
       }
     }
@@ -58,13 +60,13 @@
   "substrate": {
     "ok": true,
     "divergences": [],
-    "lines": 41
+    "lines": 82
   },
   "receipts": {
     "wal": {
       "ok": true,
       "divergences": [],
-      "lines": 41
+      "lines": 82
     },
     "events": 20
   }

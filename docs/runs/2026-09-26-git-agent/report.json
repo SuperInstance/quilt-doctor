@@ -15,14 +15,14 @@
     },
     {
       "kind": "moth",
-      "verdict": "signal is COHERENT (H-basis entropy 1.76/6 bits, fidelity 1.00 @ 20000 shots)",
-      "score": 0.7066456910676493,
+      "verdict": "signal is COHERENT (H-basis entropy 1.78/6 bits, fidelity 1.00 @ 20000 shots)",
+      "score": 0.7027451699489007,
       "receipts": {
         "fidelity": 1.0,
         "shots": 20000,
         "scheme": "qpam",
         "shots_per_amplitude": 571.4,
-        "hadamard_entropy_bits": 1.76,
+        "hadamard_entropy_bits": 1.784,
         "hadamard_entropy_max_bits": 6,
         "basis": "hadamard"
       }
@@ -39,8 +39,10 @@
         "second_peak_ratio": 0.845,
         "substrate": "qft+fft",
         "shots": 8000,
-        "qft_top_bin": 63,
-        "qft_agrees_with_fft": false
+        "seed": 49354,
+        "qft_top_bin": 1,
+        "qft_agrees_with_fft": true,
+        "real_signal_fold": true
       }
     },
     {
@@ -50,7 +52,7 @@
       "receipts": {
         "judged": 4,
         "mean_substance": 0.742,
-        "latency_ms": 299.8004239052534,
+        "latency_ms": 302.6325926184654,
         "model": "jev-latest"
       }
     }
@@ -58,13 +60,13 @@
   "substrate": {
     "ok": true,
     "divergences": [],
-    "lines": 41
+    "lines": 82
   },
   "receipts": {
     "wal": {
       "ok": true,
       "divergences": [],
-      "lines": 41
+      "lines": 82
     },
     "events": 4
   }

@@ -15,26 +15,44 @@
     },
     {
       "kind": "moth",
-      "verdict": "signal is NOISE-LIKE (H-basis entropy 2.50/6 bits)",
-      "score": 0.5837918263365007,
+      "verdict": "signal is NOISE-LIKE (H-basis entropy 2.52/6 bits)",
+      "score": 0.5803115556816567,
       "receipts": {
         "fidelity": 1.0,
         "shots": 20000,
         "scheme": "qpam",
         "shots_per_amplitude": 571.4,
-        "hadamard_entropy_bits": 2.497,
+        "hadamard_entropy_bits": 2.518,
         "hadamard_entropy_max_bits": 6,
         "basis": "hadamard"
       }
     },
     {
+      "kind": "spectral",
+      "verdict": "no heartbeat (flat spectrum) \u2014 activity has no periodic structure",
+      "score": 0.17338646764951499,
+      "receipts": {
+        "dominant_period_days": 3.05,
+        "fft_top_bin": 21,
+        "peak_concentration": 0.035,
+        "local_share": 0.234,
+        "second_peak_ratio": 0.996,
+        "substrate": "qft+fft",
+        "shots": 8000,
+        "seed": 49354,
+        "qft_top_bin": 19,
+        "qft_agrees_with_fft": false,
+        "real_signal_fold": true
+      }
+    },
+    {
       "kind": "jev",
-      "verdict": "recent work reads VERIFIABLE (mean substance 0.74 over 12 commits)",
-      "score": 0.7358333333333333,
+      "verdict": "recent work reads VERIFIABLE (mean substance 0.75 over 12 commits)",
+      "score": 0.7483333333333334,
       "receipts": {
         "judged": 12,
-        "mean_substance": 0.736,
-        "latency_ms": 288.6558212339878,
+        "mean_substance": 0.748,
+        "latency_ms": 284.19817611575127,
         "model": "jev-latest"
       }
     }
@@ -42,13 +60,13 @@
   "substrate": {
     "ok": true,
     "divergences": [],
-    "lines": 40
+    "lines": 81
   },
   "receipts": {
     "wal": {
       "ok": true,
       "divergences": [],
-      "lines": 40
+      "lines": 81
     },
     "events": 164
   }

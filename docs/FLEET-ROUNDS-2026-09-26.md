@@ -21,7 +21,10 @@ the heartbeat · JEV catches lies.**
 | hermit | **0.67 mild drift** | 0.56 noise-like | flat | **0.45 VAGUE** |
 
 All runs: `docs/runs/2026-09-26-<project>/{report.md,report.json,quilt.jsonl}` —
-substrate verify OK on all 8 (40–41 WAL lines each).
+substrate verify OK on all 8 (40–41 WAL lines each). Re-run after the spectral
+lens fixes below: 7/8 QFT↔FFT dominant-bin agreement; jev-quilt disagrees
+honestly — on a flat spectrum the QFT argmax over noise bins is arbitrary,
+and the no-heartbeat verdict never depended on it.
 
 ## What the doctor says
 
