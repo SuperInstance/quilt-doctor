@@ -61,6 +61,7 @@ def test_classical_and_quantum_spectra_agree():
     p = SpectralLens(shots=8000).project(weekly_series(), [])
     if "qft_top_bin" in p.receipts:  # quantum substrate present
         assert p.receipts["qft_top_bin"] == p.receipts["fft_top_bin"]
+        assert p.receipts["qft_top_bin"] <= 32  # folded rfft domain (N/2)
     assert p.receipts["substrate"] in ("qft+fft", "fft-only")
 
 
