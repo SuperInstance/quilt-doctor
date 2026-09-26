@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -24,9 +25,14 @@ class Diagnosis:
 
 
 def diagnose(repo_path, substrate: QuiltSubstrate,
-             jev_backend=None, moth_shots: int = 20000) -> Diagnosis:
+             jev_backend=None, moth_shots: int = 20000,
+             ledger=None) -> Diagnosis:
     series, events = collect_repo(repo_path)
     lenses = available_lenses(jev_backend=jev_backend)
+    if ledger is not None:
+        from . import wedge
+        ledger.bind_artifact(str(repo_path), "\n".join(e.get("subject", "")
+                                                     for e in events))
     for lens in lenses:
         if lens.kind == "moth":
             lens.shots = moth_shots
@@ -34,11 +40,23 @@ def diagnose(repo_path, substrate: QuiltSubstrate,
     data_sufficient = active_days >= 5  # MIN_ACTIVE_DAYS; claims.py mirrors this
     projections = []
     for l in lenses:
-        if l.kind == "jev":
-            p = l.project(series, events)  # judgment has no shuffle-null
-        else:
+        def _raw():
+            if l.kind == "jev":
+                return l.project(series, events)  # judgment has no shuffle-null
             from .lenses.nulls import with_null_receipts
-            p = with_null_receipts(l, series, events, n_null=15)
+            return with_null_receipts(l, series, events, n_null=15)
+        if ledger is not None:
+            lname = type(l).__name__
+            try:
+                p = wedge.project_receipted(ledger, f"{lname}.projection",
+                                            json.dumps(series[:64]), lname,
+                                            lambda _: _raw())
+            except Exception as e:
+                if not any(r.op == "REFUSAL" for r in ledger.rows[-1:]):
+                    ledger.refusal(f"{lname}: {type(e).__name__}: {e}")
+                raise
+        else:
+            p = _raw()
         # every projection self-carries the sufficiency caveat (pong-quilt
         # lesson: a 2-day sprint scores z=52 on an empty window)
         p.receipts["active_days"] = active_days

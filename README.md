@@ -50,6 +50,15 @@ Output: `report.md` (human), `report.json` (machine), `quilt.jsonl` (the
 substrate — verify it with `QuiltSubstrate.verify()`; every verdict is
 replayable from the chain).
 
+Boundary receipts (2026-09-26): `diagnose(..., ledger=BoundaryLedger())`
+receipts every lens invocation as hash-chained BIND/EFFECT/TICK rows —
+ported from `SuperInstance/wasm-cert-wedge`'s TCB-boundary doctrine. Live
+fleet round: 104 rows, chain re-derives clean (`docs/BOUNDARY-RECEIPTS.md`).
+
+```bash
+python3 examples/boundary_receipts.py   # receipted fleet round (8 projects)
+```
+
 ## Proof: fleet rounds — eight projects (2026-09-26)
 
 Full chart and diagnoses in [`docs/FLEET-ROUNDS-2026-09-26.md`](docs/FLEET-ROUNDS-2026-09-26.md).
@@ -103,9 +112,13 @@ quilt_doctor/
   substrate.py   # quilt WAL — the ground every verdict stands on
   collect.py     # git history -> series + events
   lenses/        # the protocol + four ports (jepa, moth, spectral, jev)
+  wedge.py       # boundary receipts — hash-chained lens invocations
   doctor.py      # orchestrator + report rendering
 run_doctor.py    # proof runner (writes report.md/json + quilt.jsonl)
-tests/           # 21 behavioral tests
+examples/boundary_receipts.py  # receipted fleet round
+run_tests.py     # pytest wrapper
+tests/           # 31 behavioral tests
+examples/        # documented proof runs
 docs/            # FLEET-ROUNDS synthesis + documented proof runs
 ```
 
