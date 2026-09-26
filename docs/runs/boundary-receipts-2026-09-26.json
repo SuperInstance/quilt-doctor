@@ -1,0 +1,80 @@
+{
+  "ledger": "/tmp/quilt-doctor/docs/runs/boundary-ledger-2026-09-26.jsonl",
+  "rows": 104,
+  "violations": [],
+  "citation": "SuperInstance/wasm-cert-wedge (TCB-boundary receipt doctrine: COMPILE/EFFECT/REFUSAL rows, occurred/recorded split); hash: FNV-1a64 fleet consensus",
+  "rounds": {
+    "git-agent": {
+      "projections": {
+        "jepa": 0.2,
+        "moth": 0.703,
+        "spectral": 0.301,
+        "jev": 0.748
+      },
+      "events": 4
+    },
+    "pong-quilt": {
+      "projections": {
+        "jepa": 0.2,
+        "moth": 0.777,
+        "spectral": 0.356,
+        "jev": 0.728
+      },
+      "events": 57
+    },
+    "quilt-tools": {
+      "projections": {
+        "jepa": 0.2,
+        "moth": 0.744,
+        "spectral": 0.27,
+        "jev": 0.694
+      },
+      "events": 20
+    },
+    "tidepool": {
+      "projections": {
+        "jepa": 0.2,
+        "moth": 0.594,
+        "spectral": 0.313,
+        "jev": 0.819
+      },
+      "events": 17
+    },
+    "quilt-studio": {
+      "projections": {
+        "jepa": 0.2,
+        "moth": 0.594,
+        "spectral": 0.267,
+        "jev": 0.719
+      },
+      "events": 52
+    },
+    "twist-engine": {
+      "projections": {
+        "jepa": 0.2,
+        "moth": 0.543,
+        "spectral": 0.296,
+        "jev": 0.667
+      },
+      "events": 17
+    },
+    "quilt-cowboy": {
+      "projections": {
+        "jepa": 0.621,
+        "moth": 0.546,
+        "spectral": 0.34,
+        "jev": 0.848
+      },
+      "events": 919
+    },
+    "hermit": {
+      "projections": {
+        "jepa": 0.672,
+        "moth": 0.564,
+        "spectral": 0.253,
+        "jev": 0.451
+      },
+      "events": 70
+    }
+  }
+}

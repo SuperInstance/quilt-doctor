@@ -1,0 +1,104 @@
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/git-agent", "sha256": "c445f7cd5de4ec2d", "fnv1a64": "7c6ff76780cf9c25"}, "prev_hash": "0000000000000000", "row_hash": "4b3ec11edf69b4f4"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "5ef75ca3fc550749", "fnv1a64": "681e72587cada435"}, "prev_hash": "4b3ec11edf69b4f4", "row_hash": "647db3aefea3ad43"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "5c5b8f388a41c32b"}, "prev_hash": "647db3aefea3ad43", "row_hash": "406290a9d9271d15"}
+{"op": "TICK", "body": {"ts": 1790416297.514, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "406290a9d9271d15", "row_hash": "f26d8aa79fc2cbb1"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "5ef75ca3fc550749", "fnv1a64": "681e72587cada435"}, "prev_hash": "f26d8aa79fc2cbb1", "row_hash": "8ced471fadec9111"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "ff6408d261fc96a0"}, "prev_hash": "8ced471fadec9111", "row_hash": "95a92cfba953cf8d"}
+{"op": "TICK", "body": {"ts": 1790416302.593, "note": "MothLens on MothLens.projection"}, "prev_hash": "95a92cfba953cf8d", "row_hash": "9b4bbc65659c28e9"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "5ef75ca3fc550749", "fnv1a64": "681e72587cada435"}, "prev_hash": "9b4bbc65659c28e9", "row_hash": "60d88e5536d3ff14"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "43fd30f91df4f5eb"}, "prev_hash": "60d88e5536d3ff14", "row_hash": "ffc3624c3c30030c"}
+{"op": "TICK", "body": {"ts": 1790416305.814, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "ffc3624c3c30030c", "row_hash": "c201f0b9d63cede4"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "5ef75ca3fc550749", "fnv1a64": "681e72587cada435"}, "prev_hash": "c201f0b9d63cede4", "row_hash": "fa30c60a959fad86"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "2bd4b18d4d41d297"}, "prev_hash": "fa30c60a959fad86", "row_hash": "ec63ead3bc2ddbfd"}
+{"op": "TICK", "body": {"ts": 1790416306.176, "note": "JevLens on JevLens.projection"}, "prev_hash": "ec63ead3bc2ddbfd", "row_hash": "6bd235a60b3f1f09"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/pong-quilt", "sha256": "e287ea1674a564c1", "fnv1a64": "c7e3cf259157a3fd"}, "prev_hash": "6bd235a60b3f1f09", "row_hash": "c43dce35cb1e7972"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "66b027149895fdc4", "fnv1a64": "dbbd54395828448b"}, "prev_hash": "c43dce35cb1e7972", "row_hash": "4279a30692a12054"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "e31749bc2f0210fa"}, "prev_hash": "4279a30692a12054", "row_hash": "90470272cc434b38"}
+{"op": "TICK", "body": {"ts": 1790416306.203, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "90470272cc434b38", "row_hash": "c15cff5b509e6be4"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "66b027149895fdc4", "fnv1a64": "dbbd54395828448b"}, "prev_hash": "c15cff5b509e6be4", "row_hash": "54895260d3c48fe5"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "7138bea38878d98e"}, "prev_hash": "54895260d3c48fe5", "row_hash": "8e4125018abf403c"}
+{"op": "TICK", "body": {"ts": 1790416311.429, "note": "MothLens on MothLens.projection"}, "prev_hash": "8e4125018abf403c", "row_hash": "894aa0878329e32c"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "66b027149895fdc4", "fnv1a64": "dbbd54395828448b"}, "prev_hash": "894aa0878329e32c", "row_hash": "0b61427cc36dd81b"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "3be0a60bf92cf7a1"}, "prev_hash": "0b61427cc36dd81b", "row_hash": "7d9d447260025334"}
+{"op": "TICK", "body": {"ts": 1790416315.557, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "7d9d447260025334", "row_hash": "edac905a053ecbd1"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "66b027149895fdc4", "fnv1a64": "dbbd54395828448b"}, "prev_hash": "edac905a053ecbd1", "row_hash": "0fff7af7a8183d4a"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "906f012e5c0c1389"}, "prev_hash": "0fff7af7a8183d4a", "row_hash": "09753bb24bf88471"}
+{"op": "TICK", "body": {"ts": 1790416315.903, "note": "JevLens on JevLens.projection"}, "prev_hash": "09753bb24bf88471", "row_hash": "b170f6eb531f6b0a"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/quilt-tools", "sha256": "d3f6818b492a0a04", "fnv1a64": "5f669bf0f27c04f6"}, "prev_hash": "b170f6eb531f6b0a", "row_hash": "9e110d42187bd855"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "e9b82a7303e81f19", "fnv1a64": "dd4d213e44787c66"}, "prev_hash": "9e110d42187bd855", "row_hash": "0ad0f5dc8e85af02"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "812d3d9cd5b1764a"}, "prev_hash": "0ad0f5dc8e85af02", "row_hash": "e812921b0c3b2f20"}
+{"op": "TICK", "body": {"ts": 1790416315.927, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "e812921b0c3b2f20", "row_hash": "95aca52e9a52fd56"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "e9b82a7303e81f19", "fnv1a64": "dd4d213e44787c66"}, "prev_hash": "95aca52e9a52fd56", "row_hash": "fac6f47fecc8c505"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "da04b41ae506b491"}, "prev_hash": "fac6f47fecc8c505", "row_hash": "55d445be3668b274"}
+{"op": "TICK", "body": {"ts": 1790416320.173, "note": "MothLens on MothLens.projection"}, "prev_hash": "55d445be3668b274", "row_hash": "a8d226dee987022b"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "e9b82a7303e81f19", "fnv1a64": "dd4d213e44787c66"}, "prev_hash": "a8d226dee987022b", "row_hash": "ee7308b32942516d"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "3c5e53e6347850b8"}, "prev_hash": "ee7308b32942516d", "row_hash": "29f7b570e57e3632"}
+{"op": "TICK", "body": {"ts": 1790416323.397, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "29f7b570e57e3632", "row_hash": "013cf7d7dd706558"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "e9b82a7303e81f19", "fnv1a64": "dd4d213e44787c66"}, "prev_hash": "013cf7d7dd706558", "row_hash": "6161c668837ac961"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "039e398edb393ef3"}, "prev_hash": "6161c668837ac961", "row_hash": "4256f9f662b28ae3"}
+{"op": "TICK", "body": {"ts": 1790416323.652, "note": "JevLens on JevLens.projection"}, "prev_hash": "4256f9f662b28ae3", "row_hash": "b9b023dd267b7f8d"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/tidepool", "sha256": "4483ac2e37b522b6", "fnv1a64": "151a9478ea4e26d2"}, "prev_hash": "b9b023dd267b7f8d", "row_hash": "044443cf40f24958"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "4b43de5e62e1c751", "fnv1a64": "4019a6ca01cf2e76"}, "prev_hash": "044443cf40f24958", "row_hash": "445f347f0dd12903"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "0ad284defc7497db"}, "prev_hash": "445f347f0dd12903", "row_hash": "b5a6de6dbc67a786"}
+{"op": "TICK", "body": {"ts": 1790416323.674, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "b5a6de6dbc67a786", "row_hash": "627fcb09cfcacb37"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "4b43de5e62e1c751", "fnv1a64": "4019a6ca01cf2e76"}, "prev_hash": "627fcb09cfcacb37", "row_hash": "3c159b19d399cc4a"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "0e0f9ae5c7d82b3b"}, "prev_hash": "3c159b19d399cc4a", "row_hash": "02b8d27f59c2fd4f"}
+{"op": "TICK", "body": {"ts": 1790416328.111, "note": "MothLens on MothLens.projection"}, "prev_hash": "02b8d27f59c2fd4f", "row_hash": "e67aa597a2ca3c13"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "4b43de5e62e1c751", "fnv1a64": "4019a6ca01cf2e76"}, "prev_hash": "e67aa597a2ca3c13", "row_hash": "70affbb923bf63db"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "039ccf7f2cce4017"}, "prev_hash": "70affbb923bf63db", "row_hash": "295025fe9bc706e3"}
+{"op": "TICK", "body": {"ts": 1790416331.286, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "295025fe9bc706e3", "row_hash": "10abe600adba173f"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "4b43de5e62e1c751", "fnv1a64": "4019a6ca01cf2e76"}, "prev_hash": "10abe600adba173f", "row_hash": "5e1760b136d65e3a"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "153086573a18793a"}, "prev_hash": "5e1760b136d65e3a", "row_hash": "050701c35dd1b26d"}
+{"op": "TICK", "body": {"ts": 1790416331.534, "note": "JevLens on JevLens.projection"}, "prev_hash": "050701c35dd1b26d", "row_hash": "e584170c13d5a597"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/quilt-studio", "sha256": "0de33d7466a61cd9", "fnv1a64": "200db33cb1fe8c88"}, "prev_hash": "e584170c13d5a597", "row_hash": "31808c615f5be2ce"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "e8399e1197c77251", "fnv1a64": "088423c55d1eb504"}, "prev_hash": "31808c615f5be2ce", "row_hash": "c8bdbd0b54eb720c"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "5a026e6f4b9bf3d5"}, "prev_hash": "c8bdbd0b54eb720c", "row_hash": "43abcd46f9ed171f"}
+{"op": "TICK", "body": {"ts": 1790416331.559, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "43abcd46f9ed171f", "row_hash": "e3f8f07293c62da1"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "e8399e1197c77251", "fnv1a64": "088423c55d1eb504"}, "prev_hash": "e3f8f07293c62da1", "row_hash": "2a9193a3664a8c45"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "e7d64a1efd780b59"}, "prev_hash": "2a9193a3664a8c45", "row_hash": "a185e1e15c5a7092"}
+{"op": "TICK", "body": {"ts": 1790416337.136, "note": "MothLens on MothLens.projection"}, "prev_hash": "a185e1e15c5a7092", "row_hash": "7cc505c5c8b0daf7"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "e8399e1197c77251", "fnv1a64": "088423c55d1eb504"}, "prev_hash": "7cc505c5c8b0daf7", "row_hash": "037c69d48c9af921"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "7cfda78fca337f19"}, "prev_hash": "037c69d48c9af921", "row_hash": "789d8e4289be4dca"}
+{"op": "TICK", "body": {"ts": 1790416341.001, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "789d8e4289be4dca", "row_hash": "7b899b60c8c8a29d"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "e8399e1197c77251", "fnv1a64": "088423c55d1eb504"}, "prev_hash": "7b899b60c8c8a29d", "row_hash": "86fd2ea2351efbad"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "d24af6e51af9785a"}, "prev_hash": "86fd2ea2351efbad", "row_hash": "0b8538d78a9d0a51"}
+{"op": "TICK", "body": {"ts": 1790416341.308, "note": "JevLens on JevLens.projection"}, "prev_hash": "0b8538d78a9d0a51", "row_hash": "048a68982d8a70a6"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/twist-engine", "sha256": "3b2a8d7cb6aec067", "fnv1a64": "a4fe08d9740064f8"}, "prev_hash": "048a68982d8a70a6", "row_hash": "243c524be0ff6ae5"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "8e0a50db076b4d28", "fnv1a64": "4e2742c55a58aa28"}, "prev_hash": "243c524be0ff6ae5", "row_hash": "d8646207fb8d4354"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "e19ea7bf4a4e6a82"}, "prev_hash": "d8646207fb8d4354", "row_hash": "963af92d7deb9f76"}
+{"op": "TICK", "body": {"ts": 1790416341.332, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "963af92d7deb9f76", "row_hash": "c6f7666357b06c69"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "8e0a50db076b4d28", "fnv1a64": "4e2742c55a58aa28"}, "prev_hash": "c6f7666357b06c69", "row_hash": "a0f30be0240bca7c"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "32fd79092d5bfebd"}, "prev_hash": "a0f30be0240bca7c", "row_hash": "4a820c3c5293cfbf"}
+{"op": "TICK", "body": {"ts": 1790416345.821, "note": "MothLens on MothLens.projection"}, "prev_hash": "4a820c3c5293cfbf", "row_hash": "6a5f48d29fc81166"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "8e0a50db076b4d28", "fnv1a64": "4e2742c55a58aa28"}, "prev_hash": "6a5f48d29fc81166", "row_hash": "8df3875da0b18a1b"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "14ccbfe088722c5b"}, "prev_hash": "8df3875da0b18a1b", "row_hash": "7371b5e692bf8770"}
+{"op": "TICK", "body": {"ts": 1790416351.651, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "7371b5e692bf8770", "row_hash": "d5a1ae6c7d24d937"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "8e0a50db076b4d28", "fnv1a64": "4e2742c55a58aa28"}, "prev_hash": "d5a1ae6c7d24d937", "row_hash": "0206d4d330828008"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "c26632c1f5d71fda"}, "prev_hash": "0206d4d330828008", "row_hash": "eb5fe4c0a97e3f77"}
+{"op": "TICK", "body": {"ts": 1790416351.915, "note": "JevLens on JevLens.projection"}, "prev_hash": "eb5fe4c0a97e3f77", "row_hash": "46c3f46455c3fc3c"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/quilt-cowboy", "sha256": "b7e2510fbbbd90ca", "fnv1a64": "e6e60b4d21fa135e"}, "prev_hash": "46c3f46455c3fc3c", "row_hash": "d5ad970c58ab0a1b"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "e32e06d3fd704594", "fnv1a64": "fee624a17b23f31e"}, "prev_hash": "d5ad970c58ab0a1b", "row_hash": "006456ef6f7855d5"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "9560188b0d3284cc"}, "prev_hash": "006456ef6f7855d5", "row_hash": "9c70f839edd75068"}
+{"op": "TICK", "body": {"ts": 1790416351.956, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "9c70f839edd75068", "row_hash": "10f90d8acfce6d48"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "e32e06d3fd704594", "fnv1a64": "fee624a17b23f31e"}, "prev_hash": "10f90d8acfce6d48", "row_hash": "ee339fd03a23137a"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "9457062bc33bbd37"}, "prev_hash": "ee339fd03a23137a", "row_hash": "9ccb1948ec1a1daa"}
+{"op": "TICK", "body": {"ts": 1790416356.911, "note": "MothLens on MothLens.projection"}, "prev_hash": "9ccb1948ec1a1daa", "row_hash": "b89a5784c709e54c"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "e32e06d3fd704594", "fnv1a64": "fee624a17b23f31e"}, "prev_hash": "b89a5784c709e54c", "row_hash": "5690868a7a728d98"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "65637a873837105b"}, "prev_hash": "5690868a7a728d98", "row_hash": "1fa94a95010e2c49"}
+{"op": "TICK", "body": {"ts": 1790416360.114, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "1fa94a95010e2c49", "row_hash": "7edb85bbba56bd10"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "e32e06d3fd704594", "fnv1a64": "fee624a17b23f31e"}, "prev_hash": "7edb85bbba56bd10", "row_hash": "97d5d5178c26c33f"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "1551d781f2e972d0"}, "prev_hash": "97d5d5178c26c33f", "row_hash": "2056206ee632d146"}
+{"op": "TICK", "body": {"ts": 1790416360.402, "note": "JevLens on JevLens.projection"}, "prev_hash": "2056206ee632d146", "row_hash": "02a8849d8c442061"}
+{"op": "BIND", "body": {"artifact": "/tmp/rounds/hermit", "sha256": "c57961a9ff9b08db", "fnv1a64": "f5569a8662c2be71"}, "prev_hash": "02a8849d8c442061", "row_hash": "6c19267116bdc18b"}
+{"op": "BIND", "body": {"artifact": "JepaLens.projection", "sha256": "eccd523f661733f2", "fnv1a64": "95355e68dbba1f4c"}, "prev_hash": "6c19267116bdc18b", "row_hash": "7ab89e2ec56a8906"}
+{"op": "EFFECT", "body": {"lens": "JepaLens", "projection_fnv1a64": "6881daff8817e09c"}, "prev_hash": "7ab89e2ec56a8906", "row_hash": "130a8a6fe5f7745c"}
+{"op": "TICK", "body": {"ts": 1790416360.429, "note": "JepaLens on JepaLens.projection"}, "prev_hash": "130a8a6fe5f7745c", "row_hash": "1126efbc3b44b0f5"}
+{"op": "BIND", "body": {"artifact": "MothLens.projection", "sha256": "eccd523f661733f2", "fnv1a64": "95355e68dbba1f4c"}, "prev_hash": "1126efbc3b44b0f5", "row_hash": "0db9411e8fbbfe52"}
+{"op": "EFFECT", "body": {"lens": "MothLens", "projection_fnv1a64": "c8be92ae8d2b77ce"}, "prev_hash": "0db9411e8fbbfe52", "row_hash": "d00af5ea1f6400e1"}
+{"op": "TICK", "body": {"ts": 1790416366.29, "note": "MothLens on MothLens.projection"}, "prev_hash": "d00af5ea1f6400e1", "row_hash": "27fcbca6f7b3230c"}
+{"op": "BIND", "body": {"artifact": "SpectralLens.projection", "sha256": "eccd523f661733f2", "fnv1a64": "95355e68dbba1f4c"}, "prev_hash": "27fcbca6f7b3230c", "row_hash": "a0ab4463acb4b08c"}
+{"op": "EFFECT", "body": {"lens": "SpectralLens", "projection_fnv1a64": "b997dec338289a92"}, "prev_hash": "a0ab4463acb4b08c", "row_hash": "6cf4cbd5b0fdc972"}
+{"op": "TICK", "body": {"ts": 1790416369.648, "note": "SpectralLens on SpectralLens.projection"}, "prev_hash": "6cf4cbd5b0fdc972", "row_hash": "a817083321bdfa59"}
+{"op": "BIND", "body": {"artifact": "JevLens.projection", "sha256": "eccd523f661733f2", "fnv1a64": "95355e68dbba1f4c"}, "prev_hash": "a817083321bdfa59", "row_hash": "303360861b0763d0"}
+{"op": "EFFECT", "body": {"lens": "JevLens", "projection_fnv1a64": "632476de17731940"}, "prev_hash": "303360861b0763d0", "row_hash": "00bc9be10f5f225a"}
+{"op": "TICK", "body": {"ts": 1790416369.933, "note": "JevLens on JevLens.projection"}, "prev_hash": "00bc9be10f5f225a", "row_hash": "90662034de548599"}
