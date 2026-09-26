@@ -83,6 +83,56 @@ a claim without a kill condition is not a claim):
 | MOTH coherence ordering (noise < healthy) is a real observable | ordering held in synthetic triangulation | ordering inverts in two consecutive rounds |
 | QFT and FFT agree when the series has enough bins | 7/8 agree; jev-quilt = small-n shot noise | qft_agrees=False on a repo with ≥ 30 commits and a stable FFT peak |
 
+## Null-cohort round (same day, null receipts wired in)
+
+Every score below is accompanied by its shuffle-null z: how many standard
+deviations the real series sits from shuffled versions of itself pushed
+through the SAME lens. |z| < 1 = indistinguishable from convention — the
+roundK guard, now standard equipment.
+
+| project | JEPA (z) | MOTH (z) | SPECTRAL (z) | qft |
+|---------|----------|----------|--------------|-----|
+| pong-quilt | 0.20 (−0.88) | 0.78 (**8.04**) | 0.354 (**6.87**) | agrees |
+| quilt-tools | 0.20 (−0.86) | 0.74 (**6.23**) | 0.270 (**6.52**) | agrees |
+| git-agent | 0.20 (−0.61) | 0.73 (**6.34**) | 0.294 (**6.22**) | agrees |
+| quilt-studio | 0.20 (−5.31) | 0.59 (**5.12**) | 0.267 (0.31) | agrees |
+| tidepool | 0.20 (−6.88) | 0.59 (1.98) | 0.313 (1.67) | agrees |
+| jev-quilt | 0.20 (−2.75) | 0.60 (0.77) | 0.214 (1.05) | agrees |
+| twist-engine | 0.20 (−1.70) | 0.54 (−0.48) | 0.296 (0.37) | agrees |
+| hermit | 0.67 (0.30) | 0.56 (−0.77) | 0.253 (−2.44) | agrees |
+
+Reading:
+- **Coherent-burst structure is real** in pong-quilt / quilt-tools / git-agent
+  (moth z > 6) and quilt-studio (z=5.12): their burst texture survives
+  shuffling by 5–8σ. Not a metric convention.
+- **The JEPA 0.20 "regime shift" is itself structure**: shuffled series score
+  HIGHER regime-shift (z strongly negative) because shuffling destroys the
+  burst blocks. Very negative JEPA z = strong block structure.
+- **hermit has NO verifiable cadence structure on this window**: jepa z=0.30,
+  moth z=−0.77 — both indistinguishable from shuffle. Round 1's "1/7d
+  predictable cadence" was a longer-window reading; the null guard retracts
+  it here.
+- twist-engine and jev-quilt read structureless on 35d windows (|z| < 1).
+  Small windows, bursty repos — extend the window before concluding anything.
+
+## Claims round 1 — executable BEACONS verdicts
+
+23 claims in `claims/fleet-2026-09-26.json`, evaluated against the receipts
+above: **22 ALIVE, 1 KILLED.**
+
+- ☠ **hermit-cadence KILLED** (jepa null_z 0.30 < 1.0). The claim as stated
+  is dead. hermit's interest now rests on its JEV evidence only.
+- **Encoding bug confessed and fixed**: the no-heartbeat claims originally
+  killed on `spectral null_z > 3` — the wrong proxy (structure-z, not
+  heartbeat). That produced 3 false kills. Heartbeat = one dominant drum, so
+  the kill condition now reads `peak_concentration > 0.35`. After the fix,
+  all 8 no-heartbeat claims ALIVE — still no drummer in the fleet.
+- Streak claims (pong-coherent, moth-ordering ×5) register first breaches
+  as warnings; one data point never kills a streak claim.
+
+A claim that cannot be killed by its own machinery is not a claim; a kill
+condition on the wrong receipt is a bug. Both lessons now live in code.
+
 ## How to reproduce
 
 ```bash

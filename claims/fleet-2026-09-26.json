@@ -91,95 +91,95 @@
      "repo": "pong-quilt",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-jev-quilt",
      "repo": "jev-quilt",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-git-agent",
      "repo": "git-agent",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-quilt-studio",
      "repo": "quilt-studio",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-twist-engine",
      "repo": "twist-engine",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-tidepool",
      "repo": "tidepool",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-quilt-tools",
      "repo": "quilt-tools",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "no-heartbeat-hermit",
      "repo": "hermit",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "null_z",
+      "receipt": "peak_concentration",
       "op": ">",
-      "value": 3.0
+      "value": 0.35
      },
-     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+     "text": "NO fleet repo has a heartbeat (bursts are the house style). Heartbeat = one dominant spectral drum; kill only on a real peak, not on structure-vs-shuffle z (round-1 encoding bug)"
     },
     {
      "id": "qft-agrees-pong-quilt",
      "repo": "pong-quilt",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -190,7 +190,7 @@
      "repo": "jev-quilt",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -201,7 +201,7 @@
      "repo": "git-agent",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -212,7 +212,7 @@
      "repo": "quilt-studio",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -223,7 +223,7 @@
      "repo": "twist-engine",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -234,7 +234,7 @@
      "repo": "tidepool",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -245,7 +245,7 @@
      "repo": "quilt-tools",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
@@ -256,7 +256,7 @@
      "repo": "hermit",
      "lens": "spectral",
      "kill_if": {
-      "receipt": "qft_agrees",
+      "receipt": "qft_agrees_with_fft",
       "op": "==",
       "value": false
      },
