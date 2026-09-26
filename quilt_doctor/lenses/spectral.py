@@ -34,6 +34,7 @@ class SpectralLens(Lens):
         self.shots = shots
         self.local_radius = local_radius
         self.second_tone_threshold = second_tone_threshold
+        self.seed = seed
 
     def _signal(self, series: List[float]) -> np.ndarray:
         s = np.asarray(series, dtype=float)
@@ -77,9 +78,18 @@ class SpectralLens(Lens):
             total = sum(counts.values())
             for bitstr, c in counts.items():
                 probs[int(bitstr, 2)] = c / total
-            if len(probs) > 1:
-                probs[0] = 0.0
-            return probs
+            # QPAM amplitudes are real ⇒ the QFT spectrum is conjugate-symmetric
+            # (bins k and N−k are the same physical frequency). Fold before
+            # comparing to the rFFT — otherwise shot noise picks a mirror.
+            n = len(probs)
+            folded = np.zeros(n // 2 + 1)
+            folded[0] = probs[0]
+            for k in range(1, n // 2):
+                folded[k] = probs[k] + probs[n - k]
+            folded[n // 2] = probs[n // 2]
+            if len(folded) > 1:
+                folded[0] = 0.0  # DC is not a heartbeat
+            return folded
         except Exception:
             return None
 
@@ -121,6 +131,7 @@ class SpectralLens(Lens):
             receipts["qft_top_bin"] = qft_bin
             receipts["substrate"] = "qft+fft"
             receipts["qft_agrees_with_fft"] = (qft_bin == fft_bin)
+            receipts["real_signal_fold"] = True
 
         if concentration < 0.10:
             return Projection(self.kind,
