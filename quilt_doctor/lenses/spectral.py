@@ -30,7 +30,7 @@ class SpectralLens(Lens):
     kind = "spectral"
 
     def __init__(self, shots: int = 8000, local_radius: int = 3,
-                 second_tone_threshold: float = 0.5):
+                 second_tone_threshold: float = 0.5, seed: int = 0xC0CA):
         self.shots = shots
         self.local_radius = local_radius
         self.second_tone_threshold = second_tone_threshold
@@ -71,8 +71,8 @@ class SpectralLens(Lens):
             qc.compose(enc, inplace=True)
             qc.compose(QFT(nq, inverse=False), inplace=True)
             qc.measure(range(nq), range(nq))
-            counts = AerSimulator().run(
-                transpile(qc, AerSimulator()), shots=self.shots).result().get_counts()
+            sim = AerSimulator(seed_simulator=self.seed)
+            counts = sim.run(transpile(qc, sim), shots=self.shots).result().get_counts()
             probs = np.zeros(2 ** nq)
             total = sum(counts.values())
             for bitstr, c in counts.items():
@@ -112,6 +112,7 @@ class SpectralLens(Lens):
             "second_peak_ratio": round(second_tone, 3),
             "substrate": "fft-only",
             "shots": self.shots,
+            "seed": self.seed,
         }
 
         qft_probs = self._qft_spectrum(sig)

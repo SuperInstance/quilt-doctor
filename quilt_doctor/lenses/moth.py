@@ -28,9 +28,11 @@ from . import Lens, Projection
 class MothLens(Lens):
     kind = "moth"
 
-    def __init__(self, shots: int = 8000, scheme: str = "qpam"):
+    def __init__(self, shots: int = 8000, scheme: str = "qpam",
+                 seed: int = 0xC0CA):
         self.shots = shots
         self.scheme = scheme
+        self.seed = seed
 
     def _to_audio(self, series: List[float]) -> np.ndarray:
         s = np.asarray(series, dtype=float)
@@ -68,7 +70,8 @@ class MothLens(Lens):
         for q in range(nq):
             qc.h(q)
         qc.measure(range(nq), range(nq))
-        res = AerSimulator().run(transpile(qc, AerSimulator()),
+        res = AerSimulator(seed_simulator=self.seed).run(
+            transpile(qc, AerSimulator(seed_simulator=self.seed)),
                                  shots=self.shots).result()
         counts = res.get_counts()
         total = sum(counts.values())
@@ -86,7 +89,8 @@ class MothLens(Lens):
                 return Projection(self.kind,
                                   "constant signal (perfectly coherent by definition)",
                                   1.0, {"fidelity": 1.0, "basis": "none",
-                                        "shots": self.shots})
+                                        "shots": self.shots,
+                                        "seed": self.seed})
             # encode TWICE: sch.decode() attaches measurements in place, which
             # would corrupt the H-basis measurement if they shared a circuit
             sch, circuit_fid = self._encode(audio)
