@@ -263,6 +263,24 @@
      "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
     }
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "claims": [
+    {
+     "id": "qft-honesty-fleet-wide",
+     "repo": "*",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees_with_fft",
+      "op": "==",
+      "value": false
+     },
+     "kill_after_streak": 1,
+     "text": "universal: every fleet repo's real-signal QFT agrees with classical FFT (honesty receipt); one named counterexample kills"
+    }
+   ],
+   "id": "jackknife-2026-09-26"
   }
  ]
 }

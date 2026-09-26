@@ -13,6 +13,7 @@ from __future__ import annotations
 import json
 import sys
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Dict, List, Optional
 
 MIN_ACTIVE_DAYS = 5  # below this, null_z measures window emptiness, not structure
@@ -61,6 +62,43 @@ def load_registry(path: str) -> List[Claim]:
     return claims
 
 
+def _evaluate_wildcard(c: Claim, projections_by_repo: Dict[str, list],
+                       state: dict, active_days: Dict[str, int],
+                       rendered: str) -> ClaimVerdict:
+    """Universal claim across repos. Skips insufficient-data repos."""
+    op = OPS[c.kill_if["op"]]
+    slot = state.setdefault(c.id, {"repos": {}})
+    evaluated = 0
+    counterexamples = []
+    for repo, projs in projections_by_repo.items():
+        n_active = active_days.get(repo)
+        if n_active is not None and n_active < MIN_ACTIVE_DAYS:
+            continue
+        match = next((p for p in (projs or [])
+                      if (p.get("lens") or p.get("kind")) == c.lens), None)
+        if match is None:
+            continue
+        observed = _extract(match, c.kill_if.get("receipt", "score"))
+        if observed is None or not isinstance(observed, (int, float)) \
+                and not isinstance(observed, bool):
+            continue
+        evaluated += 1
+        if op(observed, c.kill_if["value"]):
+            rslot = slot["repos"].setdefault(repo, 0)
+            slot["repos"][repo] = rslot + 1
+            if slot["repos"][repo] >= c.kill_after_streak:
+                counterexamples.append(repo)
+        else:
+            slot["repos"][repo] = 0
+    if evaluated == 0:
+        return ClaimVerdict(c.id, "*", c.lens, "UNVERIFIABLE",
+                            kill_condition=rendered, text=c.text)
+    status = "KILLED" if counterexamples else "ALIVE"
+    observed_txt = f"{evaluated} repo(s), counterexamples: {counterexamples or 'none'}"
+    return ClaimVerdict(c.id, "*", c.lens, status, observed=observed_txt,
+                        kill_condition=rendered, text=c.text)
+
+
 def _extract(projection: dict, key: str):
     if key == "score":
         return projection.get("score")
@@ -77,11 +115,19 @@ def evaluate_claims(claims: List[Claim], projections_by_repo: Dict[str, list],
     Data-sufficiency guard (2026-09-26 pong-quilt jackknife): if a repo's
     series has < MIN_ACTIVE_DAYS active days, the shuffle-null z measures
     window emptiness, not structure. Such claims return INSUFFICIENT_DATA,
-    name the active-day count, and do NOT touch the kill streak."""
+    name the active-day count, and do NOT touch the kill streak.
+
+    Wildcard claims (repo == "*") are universal across every repo with
+    sufficient data: one counterexample (after streak grace) kills, naming
+    the repo. Insufficient-data repos are skipped, not counterexamples."""
     verdicts = []
     for c in claims:
         cond = c.kill_if
         rendered = f"{cond.get('receipt', 'score')} {cond['op']} {cond['value']}"
+        if c.repo == "*":
+            verdicts.append(_evaluate_wildcard(c, projections_by_repo, state,
+                                               repo_active_days or {}, rendered))
+            continue
         n_active = (repo_active_days or {}).get(c.repo)
         if n_active is not None and n_active < MIN_ACTIVE_DAYS:
             verdicts.append(ClaimVerdict(
@@ -145,8 +191,11 @@ def _main(argv) -> int:
     verdicts = evaluate_claims(claims, by_repo, state,
                                repo_active_days=active)
     for v in verdicts:
-        obs = f"{v.observed:.3f}" if isinstance(v.observed, float) else "—"
-        print(f"[{v.status:12}] {v.claim_id:24} {v.repo}  observed={obs}  "
+        if isinstance(v.observed, float):
+            obs = f"{v.observed:.3f}"
+        else:
+            obs = str(v.observed) if v.observed is not None else "—"
+        print(f"[{v.status:16}] {v.claim_id:24} {v.repo}  observed={obs}  "
               f"kill if {v.kill_condition}")
     open(state_path, "w").write(json.dumps(state, indent=1))
     return 0 if all(v.status != "KILLED" for v in verdicts) else 1

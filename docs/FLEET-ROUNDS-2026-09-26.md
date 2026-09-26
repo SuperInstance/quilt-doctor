@@ -178,3 +178,42 @@ cadence claim is killed as convention), five sporadic, two sprints.
   p = 0.001 with the largest effect in the table — push that one.
 - The chance-cluster amplification (T4) is the most robust cross-seed
   phenomenon: the detector measures trust-graph clustering, not plantedness.
+
+---
+
+## Round 3 — full-cohort jackknife + wildcard claims (2026-09-26 13:20 UTC)
+
+**Jackknife extended to all 8 repos** (3×30d windows over 90d, jepa/moth/spectral):
+
+| repo | jepa | moth | spectral |
+|---|---|---|---|
+| pong-quilt (3d active) | QUIET | FRAGILE (52.95 in the one burst window) | FRAGILE (2.65) |
+| quilt-tools (3d) | QUIET | FRAGILE (54.42) | FRAGILE (2.65) |
+| git-agent (2d) | QUIET | FRAGILE (2.19 in the OLD window) | QUIET |
+| tidepool (7d) | QUIET | FRAGILE (2.27) | QUIET |
+| quilt-studio (6d) | QUIET | FRAGILE (2.26) | QUIET |
+| jev-quilt (6d) | QUIET | QUIET | QUIET |
+| twist-engine (5d) | QUIET | QUIET | QUIET |
+| hermit (16d) | QUIET (3 windows all data!) | QUIET (3 windows) | FRAGILE (2.35, one window) |
+
+**Verdict: ZERO repo×lens combinations are STABLE.** Every "structure" claim in
+the fleet is one burst window — the pong-quilt pattern replicated 8×. The
+35-day-window z-scores that looked like structure were all window-emptiness
+inflation. Hermit, the only repo with data in all 3 windows, shows no stable
+structure anywhere — it just has enough data to say so honestly.
+
+**Claims registry additions:**
+- `doctor.py` now self-carries sufficiency: `active_days`, `data_sufficient`,
+  and a ⚠ banner in the rendered report. Every projection's receipts carry
+  the same caveat. (tests/test_sufficiency.py, seeded sprint-repo fixture)
+- Wildcard claims (`repo: "*"`): universal across repos with sufficient data;
+  one named counterexample kills; insufficient repos are skipped, never
+  counterexamples. (tests/test_wildcard.py)
+- New claim `qft-honesty-fleet-wide` [*]: **ALIVE — 5 repo(s), counterexamples:
+  none.** The quantum honesty receipt holds fleet-wide on sufficient repos.
+
+**Cross-validation from the field:** pong-quilt R22 (another agent, PR #29)
+found R21's quantum-coin journal receipted 89 of 182 actual flips — the same
+receipt-inflation disease my jackknife caught in the z-scores, in the
+fleet's honesty centerpiece. The diagnosis generalizes: **the fleet counts
+what it meant to do, not what it did.** quilt-doctor is the cure.
