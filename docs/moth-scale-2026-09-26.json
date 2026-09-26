@@ -1,0 +1,330 @@
+{
+ "budgets": [
+  256,
+  1024,
+  4096,
+  16384
+ ],
+ "rows": [
+  {
+   "repo": "pong-quilt",
+   "shots": 256,
+   "fidelity": 0.974,
+   "coherence": 0.7951010334782695,
+   "h_bits": 1.229,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.23/6 bits, fidelity 0.97 @ 256 shots)"
+  },
+  {
+   "repo": "pong-quilt",
+   "shots": 1024,
+   "fidelity": 0.995,
+   "coherence": 0.7694865440570937,
+   "h_bits": 1.383,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.38/6 bits, fidelity 0.99 @ 1024 shots)"
+  },
+  {
+   "repo": "pong-quilt",
+   "shots": 4096,
+   "fidelity": 0.999,
+   "coherence": 0.7746318452949718,
+   "h_bits": 1.352,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.35/6 bits, fidelity 1.00 @ 4096 shots)"
+  },
+  {
+   "repo": "pong-quilt",
+   "shots": 16384,
+   "fidelity": 1.0,
+   "coherence": 0.7771786975855763,
+   "h_bits": 1.337,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.34/6 bits, fidelity 1.00 @ 16384 shots)"
+  },
+  {
+   "repo": "quilt-tools",
+   "shots": 256,
+   "fidelity": 0.974,
+   "coherence": 0.7555448202149403,
+   "h_bits": 1.467,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.47/6 bits, fidelity 0.97 @ 256 shots)"
+  },
+  {
+   "repo": "quilt-tools",
+   "shots": 1024,
+   "fidelity": 0.993,
+   "coherence": 0.7417172899833804,
+   "h_bits": 1.55,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.55/6 bits, fidelity 0.99 @ 1024 shots)"
+  },
+  {
+   "repo": "quilt-tools",
+   "shots": 4096,
+   "fidelity": 0.998,
+   "coherence": 0.7456366894542144,
+   "h_bits": 1.526,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.53/6 bits, fidelity 1.00 @ 4096 shots)"
+  },
+  {
+   "repo": "quilt-tools",
+   "shots": 16384,
+   "fidelity": 0.999,
+   "coherence": 0.7443642746613741,
+   "h_bits": 1.534,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.53/6 bits, fidelity 1.00 @ 16384 shots)"
+  },
+  {
+   "repo": "git-agent",
+   "shots": 256,
+   "fidelity": 0.972,
+   "coherence": 0.7078974730451253,
+   "h_bits": 1.753,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.75/6 bits, fidelity 0.97 @ 256 shots)"
+  },
+  {
+   "repo": "git-agent",
+   "shots": 1024,
+   "fidelity": 0.993,
+   "coherence": 0.7040959939751477,
+   "h_bits": 1.775,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.78/6 bits, fidelity 0.99 @ 1024 shots)"
+  },
+  {
+   "repo": "git-agent",
+   "shots": 4096,
+   "fidelity": 0.999,
+   "coherence": 0.7054470765846533,
+   "h_bits": 1.767,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.77/6 bits, fidelity 1.00 @ 4096 shots)"
+  },
+  {
+   "repo": "git-agent",
+   "shots": 16384,
+   "fidelity": 0.999,
+   "coherence": 0.7037248238994205,
+   "h_bits": 1.778,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 1.78/6 bits, fidelity 1.00 @ 16384 shots)"
+  },
+  {
+   "repo": "tidepool",
+   "shots": 256,
+   "fidelity": 0.971,
+   "coherence": 0.6302721375586471,
+   "h_bits": 2.218,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.22/6 bits, fidelity 0.97 @ 256 shots)"
+  },
+  {
+   "repo": "tidepool",
+   "shots": 1024,
+   "fidelity": 0.99,
+   "coherence": 0.6029396530309075,
+   "h_bits": 2.382,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.38/6 bits, fidelity 0.99 @ 1024 shots)"
+  },
+  {
+   "repo": "tidepool",
+   "shots": 4096,
+   "fidelity": 0.998,
+   "coherence": 0.596399604788939,
+   "h_bits": 2.422,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.42/6 bits)"
+  },
+  {
+   "repo": "tidepool",
+   "shots": 16384,
+   "fidelity": 0.999,
+   "coherence": 0.5939570043747431,
+   "h_bits": 2.436,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.44/6 bits)"
+  },
+  {
+   "repo": "quilt-studio",
+   "shots": 256,
+   "fidelity": 0.961,
+   "coherence": 0.6225454450252677,
+   "h_bits": 2.265,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.26/6 bits, fidelity 0.96 @ 256 shots)"
+  },
+  {
+   "repo": "quilt-studio",
+   "shots": 1024,
+   "fidelity": 0.992,
+   "coherence": 0.6118594248184306,
+   "h_bits": 2.329,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.33/6 bits, fidelity 0.99 @ 1024 shots)"
+  },
+  {
+   "repo": "quilt-studio",
+   "shots": 4096,
+   "fidelity": 0.996,
+   "coherence": 0.5965978332897446,
+   "h_bits": 2.42,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.42/6 bits)"
+  },
+  {
+   "repo": "quilt-studio",
+   "shots": 16384,
+   "fidelity": 0.999,
+   "coherence": 0.5937377374427759,
+   "h_bits": 2.438,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.44/6 bits)"
+  },
+  {
+   "repo": "jev-quilt",
+   "shots": 256,
+   "fidelity": 0.973,
+   "coherence": 0.6348892857141684,
+   "h_bits": 2.191,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.19/6 bits, fidelity 0.97 @ 256 shots)"
+  },
+  {
+   "repo": "jev-quilt",
+   "shots": 1024,
+   "fidelity": 0.996,
+   "coherence": 0.616320645905805,
+   "h_bits": 2.302,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.30/6 bits, fidelity 1.00 @ 1024 shots)"
+  },
+  {
+   "repo": "jev-quilt",
+   "shots": 4096,
+   "fidelity": 0.998,
+   "coherence": 0.6070256129789682,
+   "h_bits": 2.358,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.36/6 bits, fidelity 1.00 @ 4096 shots)"
+  },
+  {
+   "repo": "jev-quilt",
+   "shots": 16384,
+   "fidelity": 0.999,
+   "coherence": 0.6021940509734145,
+   "h_bits": 2.387,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.39/6 bits, fidelity 1.00 @ 16384 shots)"
+  },
+  {
+   "repo": "twist-engine",
+   "shots": 256,
+   "fidelity": 0.979,
+   "coherence": 0.5930373560402105,
+   "h_bits": 2.442,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.44/6 bits)"
+  },
+  {
+   "repo": "twist-engine",
+   "shots": 1024,
+   "fidelity": 0.991,
+   "coherence": 0.5690714498556277,
+   "h_bits": 2.586,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.59/6 bits)"
+  },
+  {
+   "repo": "twist-engine",
+   "shots": 4096,
+   "fidelity": 0.998,
+   "coherence": 0.5465708038284169,
+   "h_bits": 2.721,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.72/6 bits)"
+  },
+  {
+   "repo": "twist-engine",
+   "shots": 16384,
+   "fidelity": 1.0,
+   "coherence": 0.5442103548078097,
+   "h_bits": 2.735,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.73/6 bits)"
+  },
+  {
+   "repo": "hermit",
+   "shots": 256,
+   "fidelity": 0.963,
+   "coherence": 0.6138918745860609,
+   "h_bits": 2.317,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is COHERENT (H-basis entropy 2.32/6 bits, fidelity 0.96 @ 256 shots)"
+  },
+  {
+   "repo": "hermit",
+   "shots": 1024,
+   "fidelity": 0.986,
+   "coherence": 0.5858940275138473,
+   "h_bits": 2.485,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.48/6 bits)"
+  },
+  {
+   "repo": "hermit",
+   "shots": 4096,
+   "fidelity": 0.997,
+   "coherence": 0.565122213958098,
+   "h_bits": 2.609,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.61/6 bits)"
+  },
+  {
+   "repo": "hermit",
+   "shots": 16384,
+   "fidelity": 0.999,
+   "coherence": 0.563717386563036,
+   "h_bits": 2.618,
+   "h_max": 6,
+   "qft_agrees": null,
+   "verdict": "signal is NOISE-LIKE (H-basis entropy 2.62/6 bits)"
+  }
+ ]
+}
