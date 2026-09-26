@@ -1,0 +1,50 @@
+[
+ {
+  "test": "moth ~ active_days",
+  "n": 8,
+  "rho": -0.6386,
+  "p_exact": 0.094048,
+  "perms": 40320,
+  "note": "confounder receipt: sprint sparsity inflates quantum coherence"
+ },
+ {
+  "test": "jepa_score ~ active_days",
+  "n": 8,
+  "rho": 0.5843,
+  "p_exact": 0.25,
+  "perms": 40320,
+  "note": "JEPA score degenerates below sufficient data"
+ },
+ {
+  "test": "jev ~ active_days",
+  "n": 8,
+  "rho": -0.012,
+  "p_exact": 0.988492,
+  "perms": 40320,
+  "note": "does continuous work write vaguer commits?"
+ },
+ {
+  "test": "moth ~ jev (sufficient)",
+  "n": 5,
+  "rho": 0.8,
+  "p_exact": 0.133333,
+  "perms": 120,
+  "note": "honest record <-> quantum cadence coherence"
+ },
+ {
+  "test": "moth ~ jepa_null_z (sufficient)",
+  "n": 5,
+  "rho": -0.6,
+  "p_exact": 0.35,
+  "perms": 120,
+  "note": "quantum coherence <-> classical predictability z"
+ },
+ {
+  "test": "jev ~ jepa_null_z (sufficient)",
+  "n": 5,
+  "rho": -0.9,
+  "p_exact": 0.083333,
+  "perms": 120,
+  "note": "honest record <-> classical predictability z"
+ }
+]

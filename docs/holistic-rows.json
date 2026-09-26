@@ -1,0 +1,82 @@
+[
+ {
+  "repo": "pong-quilt",
+  "active_days": 3,
+  "jev_substance": 0.709,
+  "jev_judged": 12,
+  "jepa_score": 0.2,
+  "jepa_null_z": -0.876,
+  "moth_coherence_16k": 0.7771786975855763,
+  "sufficient": false
+ },
+ {
+  "repo": "quilt-tools",
+  "active_days": 3,
+  "jev_substance": 0.695,
+  "jev_judged": 12,
+  "jepa_score": 0.2,
+  "jepa_null_z": -0.858,
+  "moth_coherence_16k": 0.7443642746613741,
+  "sufficient": false
+ },
+ {
+  "repo": "git-agent",
+  "active_days": 2,
+  "jev_substance": 0.742,
+  "jev_judged": 4,
+  "jepa_score": 0.2,
+  "jepa_null_z": -0.615,
+  "moth_coherence_16k": 0.7037248238994205,
+  "sufficient": false
+ },
+ {
+  "repo": "tidepool",
+  "active_days": 7,
+  "jev_substance": 0.825,
+  "jev_judged": 12,
+  "jepa_score": 0.2,
+  "jepa_null_z": -6.884,
+  "moth_coherence_16k": 0.5939570043747431,
+  "sufficient": true
+ },
+ {
+  "repo": "quilt-studio",
+  "active_days": 6,
+  "jev_substance": 0.725,
+  "jev_judged": 12,
+  "jepa_score": 0.2,
+  "jepa_null_z": -5.31,
+  "moth_coherence_16k": 0.5937377374427759,
+  "sufficient": true
+ },
+ {
+  "repo": "jev-quilt",
+  "active_days": 6,
+  "jev_substance": 0.748,
+  "jev_judged": 12,
+  "jepa_score": 0.2,
+  "jepa_null_z": -2.746,
+  "moth_coherence_16k": 0.6021940509734145,
+  "sufficient": true
+ },
+ {
+  "repo": "twist-engine",
+  "active_days": 5,
+  "jev_substance": 0.673,
+  "jev_judged": 12,
+  "jepa_score": 0.2,
+  "jepa_null_z": -1.699,
+  "moth_coherence_16k": 0.5442103548078097,
+  "sufficient": true
+ },
+ {
+  "repo": "hermit",
+  "active_days": 15,
+  "jev_substance": 0.45,
+  "jev_judged": 12,
+  "jepa_score": 0.6715908818360731,
+  "jepa_null_z": 0.296,
+  "moth_coherence_16k": 0.563717386563036,
+  "sufficient": true
+ }
+]
