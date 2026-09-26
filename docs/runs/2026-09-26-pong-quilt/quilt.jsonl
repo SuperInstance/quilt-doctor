@@ -1,0 +1,40 @@
+{"args": {"source": "/root/.openclaw/workspace/pong-quilt", "tool": "quilt-doctor"}, "cell": "doctor/session", "hash": "54ee1b6c636c9617", "op": "BIND", "prev_hash": "0000000000000000", "seq": 0}
+{"args": {"axis": "commits_per_day", "t": 0, "value": 0}, "cell": "doctor/signal", "hash": "eba8dcd0490d06ac", "op": "LINK", "prev_hash": "54ee1b6c636c9617", "seq": 1}
+{"args": {"axis": "commits_per_day", "t": 1, "value": 0}, "cell": "doctor/signal", "hash": "9cc1915ca5f3871a", "op": "LINK", "prev_hash": "eba8dcd0490d06ac", "seq": 2}
+{"args": {"axis": "commits_per_day", "t": 2, "value": 0}, "cell": "doctor/signal", "hash": "9fdbae95cf07b9b8", "op": "LINK", "prev_hash": "9cc1915ca5f3871a", "seq": 3}
+{"args": {"axis": "commits_per_day", "t": 3, "value": 0}, "cell": "doctor/signal", "hash": "db7505b6c11c9666", "op": "LINK", "prev_hash": "9fdbae95cf07b9b8", "seq": 4}
+{"args": {"axis": "commits_per_day", "t": 4, "value": 0}, "cell": "doctor/signal", "hash": "bd203f4084870c16", "op": "LINK", "prev_hash": "db7505b6c11c9666", "seq": 5}
+{"args": {"axis": "commits_per_day", "t": 5, "value": 0}, "cell": "doctor/signal", "hash": "e5163e595b1199be", "op": "LINK", "prev_hash": "bd203f4084870c16", "seq": 6}
+{"args": {"axis": "commits_per_day", "t": 6, "value": 0}, "cell": "doctor/signal", "hash": "2d35c76444b1892d", "op": "LINK", "prev_hash": "e5163e595b1199be", "seq": 7}
+{"args": {"axis": "commits_per_day", "t": 7, "value": 0}, "cell": "doctor/signal", "hash": "de93e80d627dd0e2", "op": "LINK", "prev_hash": "2d35c76444b1892d", "seq": 8}
+{"args": {"axis": "commits_per_day", "t": 8, "value": 0}, "cell": "doctor/signal", "hash": "1dff63e54aa75c6e", "op": "LINK", "prev_hash": "de93e80d627dd0e2", "seq": 9}
+{"args": {"axis": "commits_per_day", "t": 9, "value": 0}, "cell": "doctor/signal", "hash": "306f73e9630232f1", "op": "LINK", "prev_hash": "1dff63e54aa75c6e", "seq": 10}
+{"args": {"axis": "commits_per_day", "t": 10, "value": 0}, "cell": "doctor/signal", "hash": "8beebbf43a0d2722", "op": "LINK", "prev_hash": "306f73e9630232f1", "seq": 11}
+{"args": {"axis": "commits_per_day", "t": 11, "value": 0}, "cell": "doctor/signal", "hash": "b67ce41c342d9fc9", "op": "LINK", "prev_hash": "8beebbf43a0d2722", "seq": 12}
+{"args": {"axis": "commits_per_day", "t": 12, "value": 0}, "cell": "doctor/signal", "hash": "f934418c47d5daa7", "op": "LINK", "prev_hash": "b67ce41c342d9fc9", "seq": 13}
+{"args": {"axis": "commits_per_day", "t": 13, "value": 0}, "cell": "doctor/signal", "hash": "87e368d8dc3291dd", "op": "LINK", "prev_hash": "f934418c47d5daa7", "seq": 14}
+{"args": {"axis": "commits_per_day", "t": 14, "value": 0}, "cell": "doctor/signal", "hash": "2f52d820884f1f03", "op": "LINK", "prev_hash": "87e368d8dc3291dd", "seq": 15}
+{"args": {"axis": "commits_per_day", "t": 15, "value": 0}, "cell": "doctor/signal", "hash": "43b8ba70ec3789b9", "op": "LINK", "prev_hash": "2f52d820884f1f03", "seq": 16}
+{"args": {"axis": "commits_per_day", "t": 16, "value": 0}, "cell": "doctor/signal", "hash": "9c8c2fda2785ec23", "op": "LINK", "prev_hash": "43b8ba70ec3789b9", "seq": 17}
+{"args": {"axis": "commits_per_day", "t": 17, "value": 0}, "cell": "doctor/signal", "hash": "129236a89b3cc005", "op": "LINK", "prev_hash": "9c8c2fda2785ec23", "seq": 18}
+{"args": {"axis": "commits_per_day", "t": 18, "value": 0}, "cell": "doctor/signal", "hash": "206f3c86b230d627", "op": "LINK", "prev_hash": "129236a89b3cc005", "seq": 19}
+{"args": {"axis": "commits_per_day", "t": 19, "value": 0}, "cell": "doctor/signal", "hash": "82ca59d7ea54db15", "op": "LINK", "prev_hash": "206f3c86b230d627", "seq": 20}
+{"args": {"axis": "commits_per_day", "t": 20, "value": 0}, "cell": "doctor/signal", "hash": "8f39190fe4d5b486", "op": "LINK", "prev_hash": "82ca59d7ea54db15", "seq": 21}
+{"args": {"axis": "commits_per_day", "t": 21, "value": 0}, "cell": "doctor/signal", "hash": "c32562cd61a09b66", "op": "LINK", "prev_hash": "8f39190fe4d5b486", "seq": 22}
+{"args": {"axis": "commits_per_day", "t": 22, "value": 0}, "cell": "doctor/signal", "hash": "0846b8616417ce61", "op": "LINK", "prev_hash": "c32562cd61a09b66", "seq": 23}
+{"args": {"axis": "commits_per_day", "t": 23, "value": 0}, "cell": "doctor/signal", "hash": "cab8cfabba83e794", "op": "LINK", "prev_hash": "0846b8616417ce61", "seq": 24}
+{"args": {"axis": "commits_per_day", "t": 24, "value": 0}, "cell": "doctor/signal", "hash": "74946b7e0c81e7ff", "op": "LINK", "prev_hash": "cab8cfabba83e794", "seq": 25}
+{"args": {"axis": "commits_per_day", "t": 25, "value": 0}, "cell": "doctor/signal", "hash": "f84d7630d52e9e96", "op": "LINK", "prev_hash": "74946b7e0c81e7ff", "seq": 26}
+{"args": {"axis": "commits_per_day", "t": 26, "value": 0}, "cell": "doctor/signal", "hash": "6a528561e11ab1ed", "op": "LINK", "prev_hash": "f84d7630d52e9e96", "seq": 27}
+{"args": {"axis": "commits_per_day", "t": 27, "value": 0}, "cell": "doctor/signal", "hash": "e73c2dc8694a79a2", "op": "LINK", "prev_hash": "6a528561e11ab1ed", "seq": 28}
+{"args": {"axis": "commits_per_day", "t": 28, "value": 0}, "cell": "doctor/signal", "hash": "d7773bf370075b7a", "op": "LINK", "prev_hash": "e73c2dc8694a79a2", "seq": 29}
+{"args": {"axis": "commits_per_day", "t": 29, "value": 0}, "cell": "doctor/signal", "hash": "c66a6af83eaeabe7", "op": "LINK", "prev_hash": "d7773bf370075b7a", "seq": 30}
+{"args": {"axis": "commits_per_day", "t": 30, "value": 0}, "cell": "doctor/signal", "hash": "95a4bb2482b8ef8e", "op": "LINK", "prev_hash": "c66a6af83eaeabe7", "seq": 31}
+{"args": {"axis": "commits_per_day", "t": 31, "value": 0}, "cell": "doctor/signal", "hash": "daf0a54924dbdbb9", "op": "LINK", "prev_hash": "95a4bb2482b8ef8e", "seq": 32}
+{"args": {"axis": "commits_per_day", "t": 32, "value": 14}, "cell": "doctor/signal", "hash": "d3b866667571bd4e", "op": "LINK", "prev_hash": "daf0a54924dbdbb9", "seq": 33}
+{"args": {"axis": "commits_per_day", "t": 33, "value": 28}, "cell": "doctor/signal", "hash": "8b31129aa07804d8", "op": "LINK", "prev_hash": "d3b866667571bd4e", "seq": 34}
+{"args": {"axis": "commits_per_day", "t": 34, "value": 12}, "cell": "doctor/signal", "hash": "7b7a3aac7aec2442", "op": "LINK", "prev_hash": "8b31129aa07804d8", "seq": 35}
+{"args": {"count": 54}, "cell": "doctor/events", "hash": "8476120efc54d81d", "op": "LINK", "prev_hash": "7b7a3aac7aec2442", "seq": 36}
+{"args": {"receipts": {"differenced": true, "extrapolation_cos": 0.0, "in_dist_cos": 0.0, "n": 35, "window": 4}, "score": 0.2, "verdict": "REGIME SHIFT: recent cadence breaks prediction (cos=0.00)"}, "cell": "doctor/projection/jepa", "hash": "edf7347458524141", "op": "VIEW", "prev_hash": "8476120efc54d81d", "seq": 37}
+{"args": {"receipts": {"basis": "hadamard", "fidelity": 1.0, "hadamard_entropy_bits": 1.322, "hadamard_entropy_max_bits": 6, "scheme": "qpam", "shots": 20000, "shots_per_amplitude": 571.4}, "score": 0.7797454968353762, "verdict": "signal is COHERENT (H-basis entropy 1.32/6 bits, fidelity 1.00 @ 20000 shots)"}, "cell": "doctor/projection/moth", "hash": "b848e5bd389db8c3", "op": "VIEW", "prev_hash": "edf7347458524141", "seq": 38}
+{"args": {"receipts": {"judged": 12, "latency_ms": 310.57303585112095, "mean_substance": 0.719, "model": "jev-latest"}, "score": 0.7191666666666666, "verdict": "recent work reads VERIFIABLE (mean substance 0.72 over 12 commits)"}, "cell": "doctor/projection/jev", "hash": "af6d9e55e97d4662", "op": "VIEW", "prev_hash": "b848e5bd389db8c3", "seq": 39}
