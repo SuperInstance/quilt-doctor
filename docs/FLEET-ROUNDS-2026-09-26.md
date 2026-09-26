@@ -69,9 +69,23 @@ Quasiperiodic test vector (7d + 13.7d): correctly flagged
 `second_peak_ratio=0.79 → QUASIPERIODIC`. Weekly vector: `heartbeat 7.1d,
 single drum → metronomic`. Noise: `flat spectrum`.
 
+## BEACONS — falsifiable claims with kill conditions
+
+Claims from these rounds, stated so a future round can KILL them
+(BEACONS doctrine, ported from the quilt-verilog research program —
+a claim without a kill condition is not a claim):
+
+| Claim | Receipt anchor | Kill condition |
+|-------|---------------|----------------|
+| pong-quilt's bursts are coherent structure, not convention | MOTH healthy 0.93–1.33 bits, far above noise | two consecutive rounds with null_z < 1.5 (indistinguishable from shuffle-null) |
+| hermit's cadence is predictable structure | JEPA 0.67 with spectral peak at 1/7d | null_z < 1 on the cadence score in any round |
+| NO fleet repo has a heartbeat (bursts are the house style) | 0/8 heartbeat; spectral entropy 0.76–0.95 | any repo shows a periodic peak with z > 3 |
+| MOTH coherence ordering (noise < healthy) is a real observable | ordering held in synthetic triangulation | ordering inverts in two consecutive rounds |
+| QFT and FFT agree when the series has enough bins | 7/8 agree; jev-quilt = small-n shot noise | qft_agrees=False on a repo with ≥ 30 commits and a stable FFT peak |
+
 ## How to reproduce
 
 ```bash
 python3 run_doctor.py <repo> docs/runs/<date>-<name>   # one project
-python3 -m pytest tests -q                             # 21 behavioral tests
+python3 -m pytest tests -q                             # 25 behavioral tests
 ```

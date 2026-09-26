@@ -31,6 +31,14 @@ Every `Projection` carries **receipts** — substrate config and the numbers the
 verdict stands on. No naked verdicts. Offline lenses abstain with
 `{"jev": "skipped"}` and a neutral 0.5: abstention is not condemnation.
 
+Every lens score also carries a **null receipt** — the same series shuffled
+and pushed through the same lens N times (`null_mean`, `null_std`,
+`null_z`, `null_n`, `null_seed`). The z-score is the honest signal:
+a lens that scores shuffled data the same as real data is measuring a
+convention, not the project. Doctrine ported from the quilt-verilog
+14-round iteration archive (roundK-red): **the null model IS the
+experiment.**
+
 ## Quick start
 
 ```bash

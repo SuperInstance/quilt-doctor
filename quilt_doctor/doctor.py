@@ -28,7 +28,13 @@ def diagnose(repo_path, substrate: QuiltSubstrate,
     for lens in lenses:
         if lens.kind == "moth":
             lens.shots = moth_shots
-    projections = [l.project(series, events) for l in lenses]
+    projections = []
+    for l in lenses:
+        if l.kind == "jev":
+            projections.append(l.project(series, events))  # judgment has no shuffle-null
+            continue
+        from .lenses.nulls import with_null_receipts
+        projections.append(with_null_receipts(l, series, events, n_null=15))
     substrate.record_observation(series, events, source=repo_path,
                                  projections=projections)
     report = substrate.verify()
