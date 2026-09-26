@@ -1,0 +1,268 @@
+{
+ "rounds": [
+  {
+   "id": "fleet-2026-09-26",
+   "claims": [
+    {
+     "id": "pong-coherent",
+     "repo": "pong-quilt",
+     "lens": "moth",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.5
+     },
+     "kill_after_streak": 2,
+     "text": "pong-quilt's bursts are coherent structure, not convention"
+    },
+    {
+     "id": "hermit-cadence",
+     "repo": "hermit",
+     "lens": "jepa",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.0
+     },
+     "text": "hermit's cadence is predictable structure (spectral peak at 1/7d)"
+    },
+    {
+     "id": "moth-ordering-pong-quilt",
+     "repo": "pong-quilt",
+     "lens": "moth",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.0
+     },
+     "kill_after_streak": 2,
+     "text": "MOTH coherence ordering (noise < healthy) is a real observable"
+    },
+    {
+     "id": "moth-ordering-quilt-tools",
+     "repo": "quilt-tools",
+     "lens": "moth",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.0
+     },
+     "kill_after_streak": 2,
+     "text": "MOTH coherence ordering (noise < healthy) is a real observable"
+    },
+    {
+     "id": "moth-ordering-git-agent",
+     "repo": "git-agent",
+     "lens": "moth",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.0
+     },
+     "kill_after_streak": 2,
+     "text": "MOTH coherence ordering (noise < healthy) is a real observable"
+    },
+    {
+     "id": "moth-ordering-tidepool",
+     "repo": "tidepool",
+     "lens": "moth",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.0
+     },
+     "kill_after_streak": 2,
+     "text": "MOTH coherence ordering (noise < healthy) is a real observable"
+    },
+    {
+     "id": "moth-ordering-hermit",
+     "repo": "hermit",
+     "lens": "moth",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": "<",
+      "value": 1.0
+     },
+     "kill_after_streak": 2,
+     "text": "MOTH coherence ordering (noise < healthy) is a real observable"
+    },
+    {
+     "id": "no-heartbeat-pong-quilt",
+     "repo": "pong-quilt",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-jev-quilt",
+     "repo": "jev-quilt",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-git-agent",
+     "repo": "git-agent",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-quilt-studio",
+     "repo": "quilt-studio",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-twist-engine",
+     "repo": "twist-engine",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-tidepool",
+     "repo": "tidepool",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-quilt-tools",
+     "repo": "quilt-tools",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "no-heartbeat-hermit",
+     "repo": "hermit",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "null_z",
+      "op": ">",
+      "value": 3.0
+     },
+     "text": "NO fleet repo has a heartbeat (bursts are the house style)"
+    },
+    {
+     "id": "qft-agrees-pong-quilt",
+     "repo": "pong-quilt",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-jev-quilt",
+     "repo": "jev-quilt",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-git-agent",
+     "repo": "git-agent",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-quilt-studio",
+     "repo": "quilt-studio",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-twist-engine",
+     "repo": "twist-engine",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-tidepool",
+     "repo": "tidepool",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-quilt-tools",
+     "repo": "quilt-tools",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    },
+    {
+     "id": "qft-agrees-hermit",
+     "repo": "hermit",
+     "lens": "spectral",
+     "kill_if": {
+      "receipt": "qft_agrees",
+      "op": "==",
+      "value": false
+     },
+     "text": "QFT and FFT agree when the series has enough bins (doc caveat: applies to repos with >= 30 commits)"
+    }
+   ]
+  }
+ ]
+}
