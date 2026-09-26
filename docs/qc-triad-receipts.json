@@ -1,0 +1,73 @@
+{
+ "repo": "quilt-cowboy",
+ "active_days": 1,
+ "window_days": 35,
+ "jev": {
+  "score": 0.04,
+  "receipts": {
+   "judged": 12,
+   "mean_substance": 0.04,
+   "latency_ms": 307.78491869568825,
+   "model": "jev-latest"
+  }
+ },
+ "jepa": {
+  "score": 0.2,
+  "receipts": {
+   "in_dist_cos": 0.0,
+   "extrapolation_cos": 0.0,
+   "differenced": true,
+   "window": 4,
+   "n": 35,
+   "null_mean": 0.2372,
+   "null_std": 0.065,
+   "null_z": -0.572,
+   "null_n": 15,
+   "null_seed": 3547
+  }
+ },
+ "moth": {
+  "score": 0.5676092049915151,
+  "receipts": {
+   "fidelity": 0.999,
+   "shots": 16384,
+   "scheme": "qpam",
+   "shots_per_amplitude": 468.1,
+   "hadamard_entropy_bits": 2.594,
+   "hadamard_entropy_max_bits": 6,
+   "basis": "hadamard"
+  }
+ },
+ "spectral": {
+  "score": 0.1860799414597923,
+  "receipts": {
+   "dominant_period_days": 21.33,
+   "fft_top_bin": 3,
+   "peak_concentration": 0.037,
+   "local_share": 0.177,
+   "second_peak_ratio": 0.902,
+   "substrate": "qft+fft",
+   "shots": 16384,
+   "seed": 49354,
+   "qft_top_bin": 3,
+   "qft_agrees_with_fft": true,
+   "real_signal_fold": true
+  }
+ },
+ "series_tail": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ]
+}

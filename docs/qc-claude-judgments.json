@@ -1,0 +1,20 @@
+{
+  "judge": "claude-code",
+  "per_commit": [
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05
+  ],
+  "mean": 0.05,
+  "message_vs_work": "A nominal gap exists but it is not a gap hiding engineering. Every diff touches exactly one file, cowboy_status/index.html (verified: git show --name-only across all 12 yields that single path), a machine-regenerated dashboard produced by cowboy_status_updater.py, which runs live_status.py on a 60s loop and auto-commits/auto-pushes - hence 12 commits in 12 minutes (05:56-06:07 UTC 2026-09-09). The message therefore omits the one real, checkable datum available: the named artifact and its concrete churn (Last-refresh timestamp; KPI Canon Papers 1891->1916, max paper #2289->#2314, Today 674->699; ~24 appended entries such as 054534-the-fir, 060153-the-phoenix, 060620-the-valkyrie). Ironically the generator hard-codes 'chore: refresh cowboy_status', which WOULD name the file; the deployed commits dropped the filename, and that drop is precisely what the strict noul penalizes. But the diff content fails the verification the noul also cares about: none of the named entries has a corresponding artifact in cowboy_papers/ (1745 files; exact-timestamp lookups 20260909-054534/-054619/-055519/-060153/-060620 all return 0, and slugs the-fir/the-darts/the-go/the-jacks/the-valkyrie match zero files), and the counters do not reconcile with the repo (1745 paper files vs 1916 claimed; no files exist in the 05:45-06:06 window the page lists). So the work the messages fail to name is itself uncorroborated generated output - a dashboard asserting pipeline activity its own artifact store cannot confirm. No source file, function, or test changed in any of the 12; the repo's real engineering (cowboy_orchestrator_v3.py, cell_router.py, the actual paper markdowns) is untouched by this window.",
+  "rationale": "All 12 subjects are byte-identical ('chore: refresh status', subject-only, no body), so identical scores are the only defensible treatment; differentiating on diff content would smuggle task 3 into a message-scoring criterion. Under the strict noul each names no file, function, test, PR, or artifact on its face - 'status' is a generic noun, not a named artifact - which caps the score at the floor. I give 0.05 rather than 0.0 only because 'refresh status' is denotatively checkable (it resolves to the real tracked file cowboy_status/index.html, and the timestamp claim is falsifiable), putting it marginally above 'vague activity no one could check'; it earns no naming credit. The commit series is demonstrably autonomous machine output (updater script + 1/min cadence + 60s loop), so none of the 12 represents authored engineering communication, and the diffs' own claims (paper entries, counters) cross-check to nothing in the repo, so there is no under-credited work to restore via the scores."
+}
