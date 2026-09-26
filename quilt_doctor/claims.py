@@ -15,6 +15,8 @@ import sys
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
+MIN_ACTIVE_DAYS = 5  # below this, null_z measures window emptiness, not structure
+
 OPS = {
     "<": lambda a, b: a < b,
     "<=": lambda a, b: a <= b,
@@ -66,13 +68,27 @@ def _extract(projection: dict, key: str):
 
 
 def evaluate_claims(claims: List[Claim], projections_by_repo: Dict[str, list],
-                    state: dict) -> List[ClaimVerdict]:
+                    state: dict,
+                    repo_active_days: Optional[Dict[str, int]] = None
+                    ) -> List[ClaimVerdict]:
     """Evaluate claims against {repo: [projection, ...]}. `state` is mutated:
-    state[claim_id] = {"streak": n} survives across rounds."""
+    state[claim_id] = {"streak": n} survives across rounds.
+
+    Data-sufficiency guard (2026-09-26 pong-quilt jackknife): if a repo's
+    series has < MIN_ACTIVE_DAYS active days, the shuffle-null z measures
+    window emptiness, not structure. Such claims return INSUFFICIENT_DATA,
+    name the active-day count, and do NOT touch the kill streak."""
     verdicts = []
     for c in claims:
         cond = c.kill_if
         rendered = f"{cond.get('receipt', 'score')} {cond['op']} {cond['value']}"
+        n_active = (repo_active_days or {}).get(c.repo)
+        if n_active is not None and n_active < MIN_ACTIVE_DAYS:
+            verdicts.append(ClaimVerdict(
+                c.id, c.repo, c.lens, "INSUFFICIENT_DATA",
+                observed=f"{n_active} active days (< {MIN_ACTIVE_DAYS})",
+                kill_condition=rendered, text=c.text))
+            continue
         projs = projections_by_repo.get(c.repo) or []
         match = next((p for p in projs
                       if (p.get("lens") or p.get("kind")) == c.lens), None)
@@ -106,16 +122,28 @@ def _main(argv) -> int:
         return 2
     claims = load_registry(argv[1])
     by_repo = {}
+    active = {}
     for path in argv[2:]:
         d = json.loads(open(path).read())
-        repo = d.get("source", path)
-        by_repo[repo] = d.get("projections", [])
+        src = d.get("source", "")
+        name = Path(src).name if src else Path(path).parent.name
+        by_repo[name] = d.get("projections", [])
+        try:
+            import subprocess
+            out = subprocess.run(
+                ["git", "-C", src, "log", "--since=35 days ago",
+                 "--pretty=format:%ad", "--date=short"],
+                capture_output=True, text=True, check=True).stdout
+            active[name] = len({l for l in out.splitlines() if l.strip()})
+        except Exception:
+            pass  # clone cleaned; guard stays silent, claim evaluates normally
     state_path = "/tmp/quilt-doctor/.claims-state.json"
     try:
         state = json.loads(open(state_path).read())
     except (OSError, json.JSONDecodeError):
         state = {}
-    verdicts = evaluate_claims(claims, by_repo, state)
+    verdicts = evaluate_claims(claims, by_repo, state,
+                               repo_active_days=active)
     for v in verdicts:
         obs = f"{v.observed:.3f}" if isinstance(v.observed, float) else "—"
         print(f"[{v.status:12}] {v.claim_id:24} {v.repo}  observed={obs}  "

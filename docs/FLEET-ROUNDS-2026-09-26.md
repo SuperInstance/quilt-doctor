@@ -139,3 +139,42 @@ condition on the wrong receipt is a bug. Both lessons now live in code.
 python3 run_doctor.py <repo> docs/runs/<date>-<name>   # one project
 python3 -m pytest tests -q                             # 25 behavioral tests
 ```
+
+---
+
+## Round 2 — jackknife + guard (2026-09-26 12:05 UTC)
+
+**The jackknife killed a headline interpretation.** pong-quilt's 57 commits
+all fall inside 2 active days (Aug 27-28); the 30-day windows either side
+are empty. The full-window moth null_z of 8.04 was window-emptiness
+inflation: measured per-window, the z hits 52.95 in the one nonempty window
+and is undefined in the empty ones. A single sprint is not "coherent burst
+structure" — it is one weekend.
+
+**Guard shipped** (`MIN_ACTIVE_DAYS = 5`): claims evaluated on starved
+series return `INSUFFICIENT_DATA`, name the active-day count, and never
+touch the kill streak. FAIL-first: 4 tests, then implement.
+
+**Claims round 2** (fresh active-day counts per repo):
+
+- 12 ALIVE / 1 KILLED (hermit-cadence, stays dead) / 10 INSUFFICIENT_DATA
+- Claims previously ALIVE on pong-quilt / quilt-tools / git-agent z-scores
+  are voided: those repos have 3, 3, and 2 active days. The z-scores were
+  measuring the emptiness of the window.
+- twist-engine passes the guard at exactly 5 active days — borderline,
+  noted.
+
+Active-day census (35d window): hermit 16, tidepool 7, quilt-studio 6,
+jev-quilt 6, twist-engine 5, pong-quilt 3, quilt-tools 3, git-agent 2.
+The fleet's honest summary: one continuously-active repo (hermit, and its
+cadence claim is killed as convention), five sporadic, two sprints.
+
+**Round M replication verdict** (full doc: QUILT-VERILOG-REPLICATION.md):
+- Faithful pass reproduces C_trust = 0.000328 exactly — the code is real.
+- p < 0.0001 is a formatting artifact (50 perms → floor 1/51 ≈ 0.02).
+- Headline config is seed-fragile: fresh seed → p = 0.046; J=2.0 config is
+  a window-length artifact (p = 1.0 under subsampling).
+- Round R critical point (J=0.25, n=32, 4 cohorts) survives fresh seed at
+  p = 0.001 with the largest effect in the table — push that one.
+- The chance-cluster amplification (T4) is the most robust cross-seed
+  phenomenon: the detector measures trust-graph clustering, not plantedness.
