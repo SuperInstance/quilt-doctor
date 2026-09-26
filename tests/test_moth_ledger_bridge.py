@@ -16,7 +16,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "examples"))
 try:
-    import moth_ledger_bridge as bridge
+    import moth_ledger_bridge as bridge  # noqa: F401
+    import moth_ledger  # noqa: F401 — the bridge books into it at run time
     MOTH_LEDGER = True
 except ImportError:
     MOTH_LEDGER = False

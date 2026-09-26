@@ -36,9 +36,10 @@ def available_lenses(jev_backend=None) -> List[Lens]:
     from .jepa import JepaLens
     from .moth import MothLens
     from .jev import JevLens
+    from .oracle import OracleLens
     from .spectral import SpectralLens
 
-    lenses: List[Lens] = [JepaLens(), MothLens(), SpectralLens()]
+    lenses: List[Lens] = [JepaLens(), MothLens(), OracleLens(), SpectralLens()]
     if jev_backend is not None:
         lenses.append(JevLens(backend=jev_backend))
     return lenses
